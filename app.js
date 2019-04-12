@@ -85,6 +85,10 @@ app.post('/login',function(req, res, next) {
 
 //270============================================================================
 
+
+
+
+
 //SS======================================
 
 
@@ -374,6 +378,50 @@ app.post('/pj/lv/ctrl',function(req, res, next) {
 })
 
 
+//Exe=====================
+app.post('/wf/exe',function(req, res, next) {
+	
+	console.log(req.body)
+
+	var s  = {
+		access_token:"asd12rl;3k2eo1kejf",
+		topic:"boch/270/flyput/exe",
+		payload:""};
+
+		sendJson(s);
+
+		res.json(success);  
+	})
+
+app.post('/vr/exe',function(req, res, next) {
+	
+	console.log(req.body)
+
+	var s  = {
+		access_token:"asd12rl;3k2eo1kejf",
+		topic:"boch/270/vr/exe",
+		payload:""};
+
+		sendJson(s);
+
+		res.json(success);  
+	})
+
+app.post('/pj/lv/exe',function(req, res, next) {
+	
+	console.log(req.body)
+
+	var s  = {
+		access_token:"asd12rl;3k2eo1kejf",
+		topic:"boch/270/lv/exe",
+		payload:""};
+
+		sendJson(s);
+
+		res.json(success);  
+	})
+
+
 //TO============================================================================
 
 //INFO=========================================
@@ -521,6 +569,40 @@ app.post('/to/lv/ctrl',function(req, res, next) {
 	console.log("Lv dir" + req.query.dir);
 	res.json(success); 
 })
+
+
+
+
+//Exe=====================
+app.post('/if/exe',function(req, res, next) {
+	
+	console.log(req.body)
+
+	var s  = {
+		access_token:"asd12rl;3k2eo1kejf",
+		topic:"boch/wall/class/exe",
+		payload:""};
+
+		sendJson(s);
+
+		res.json(success);  
+	})
+
+
+
+app.post('/to/lv/exe',function(req, res, next) {
+	
+	console.log(req.body)
+
+	var s  = {
+		access_token:"asd12rl;3k2eo1kejf",
+		topic:"boch/wall/lv/exe",
+		payload:""};
+
+		sendJson(s);
+
+		res.json(success);  
+	})
 
 
 
