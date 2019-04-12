@@ -1,0 +1,20 @@
+{
+  "name": "sendjson_0314",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "fs": "0.0.1-security",
+    "json-query": "^2.2.2",
+    "node-dir": "^0.1.17",
+    "request": "^2.88.0",
+    "sharp": "^0.22.0"
+  }
+}
