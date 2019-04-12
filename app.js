@@ -25,7 +25,7 @@ var app = express();
 
 var wallUrl = "http://"+config.serverIp+":"+config.port+"/static/wall/";
 var flyputUrl = "http://"+config.serverIp+":"+config.port+"/static/flyput/";
-var VRUrl = "http://"+config.serverIp+":"+config.port+"/static/"
+var VRUrl = "http://"+config.serverIp+":"+config.port+"/static/VR/"
 
 
 app.use(bodyParser.urlencoded({extended:true}));
