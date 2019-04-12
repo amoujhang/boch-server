@@ -588,7 +588,19 @@ app.post('/if/exe',function(req, res, next) {
 		res.json(success);  
 	})
 
+app.post('/pr/exe',function(req, res, next) {
+	
+	console.log(req.body)
 
+	var s  = {
+		access_token:"asd12rl;3k2eo1kejf",
+		topic:"boch/wall/private/exe",
+		payload:""};
+
+		sendJson(s);
+
+		res.json(success);  
+	})
 
 app.post('/to/lv/exe',function(req, res, next) {
 	
