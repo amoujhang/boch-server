@@ -1,246 +1,91 @@
-{
-	"dropdownName": [{
-			"name": "縣市"
-		}, {
-			"name": "資產類別"
-		}, {
-			"name": "資產種類"
-		}
-	],
-	"lists": [{
-			"list0": "臺北市",
-			"childeren0": [{
-					"list1": "民俗",
-					"childeren1": [{
-							"list2": "信仰"
-						}, {
-							"list2": "節慶"
-						}
-					]
-				}
-			]
-		}, {
-			"list0": "基隆市",
-			"childeren0": [{
-					"list1": "民俗",
-					"childeren1": [{
-							"list2": "節慶"
-						}
-					]
-				}
-			]
-		}, {
-			"list0": "新北市",
-			"childeren0": [{
-					"list1": "民俗",
-					"childeren1": [{
-							"list2": "信仰"
-						}, {
-							"list2": "節慶"
-						}, {
-							"list2": "風俗"
-						}
-					]
-				}
-			]
-		}, {
-			"list0": "桃園市",
-			"childeren0": [{
-					"list1": "民俗",
-					"childeren1": [{
-							"list2": "信仰"
-						}
-					]
-				}
-			]
-		}, {
-			"list0": "新竹縣",
-			"childeren0": [{
-					"list1": "民俗",
-					"childeren1": [{
-							"list2": "信仰"
-						}
-					]
-				}
-			]
-		}, {
-			"list0": "苗栗縣",
-			"childeren0": [{
-					"list1": "民俗",
-					"childeren1": [{
-							"list2": "信仰"
-						}, {
-							"list2": "節慶"
-						}, {
-							"list2": "風俗"
-						}
-					]
-				}
-			]
-		}, {
-			"list0": "臺中市",
-			"childeren0": [{
-					"list1": "民俗",
-					"childeren1": [{
-							"list2": "信仰"
-						}, {
-							"list2": "風俗"
-						}
-					]
-				}
-			]
-		}, {
-			"list0": "彰化縣",
-			"childeren0": [{
-					"list1": "民俗",
-					"childeren1": [{
-							"list2": "節慶"
-						}, {
-							"list2": "信仰"
-						}, {
-							"list2": "風俗"
-						}
-					]
-				}
-			]
-		}, {
-			"list0": "南投縣",
-			"childeren0": [{
-					"list1": "民俗",
-					"childeren1": [{
-							"list2": "信仰"
-						}, {
-							"list2": "風俗"
-						}
-					]
-				}
-			]
-		}, {
-			"list0": "雲林縣",
-			"childeren0": [{
-					"list1": "民俗",
-					"childeren1": [{
-							"list2": "信仰"
-						}
-					]
-				}
-			]
-		}, {
-			"list0": "嘉義市",
-			"childeren0": [{
-					"list1": "民俗",
-					"childeren1": [{
-							"list2": "節慶"
-						}
-					]
-				}
-			]
-		}, {
-			"list0": "嘉義縣",
-			"childeren0": [{
-					"list1": "民俗",
-					"childeren1": [{
-							"list2": "風俗"
-						}, {
-							"list2": "信仰"
-						}, {
-							"list2": "信仰儀式、祭典、節慶"
-						}
-					]
-				}
-			]
-		}, {
-			"list0": "臺南市",
-			"childeren0": [{
-					"list1": "民俗",
-					"childeren1": [{
-							"list2": "風俗"
-						}, {
-							"list2": "信仰"
-						}, {
-							"list2": "節慶"
-						}
-					]
-				}
-			]
-		}, {
-			"list0": "高雄市",
-			"childeren0": [{
-					"list1": "民俗",
-					"childeren1": [{
-							"list2": "信仰"
-						}, {
-							"list2": "風俗"
-						}
-					]
-				}
-			]
-		}, {
-			"list0": "屏東縣",
-			"childeren0": [{
-					"list1": "民俗",
-					"childeren1": [{
-							"list2": "節慶"
-						}, {
-							"list2": "信仰"
-						}, {
-							"list2": "風俗"
-						}, {
-							"list2": "節慶信仰及相關文物"
-						}
-					]
-				}
-			]
-		}, {
-			"list0": "澎湖縣",
-			"childeren0": [{
-					"list1": "民俗",
-					"childeren1": [{
-							"list2": "風俗"
-						}, {
-							"list2": "信仰"
-						}
-					]
-				}
-			]
-		}, {
-			"list0": "花蓮縣",
-			"childeren0": [{
-					"list1": "民俗",
-					"childeren1": [{
-							"list2": "信仰"
-						}
-					]
-				}
-			]
-		}, {
-			"list0": "金門縣",
-			"childeren0": [{
-					"list1": "民俗",
-					"childeren1": [{
-							"list2": "信仰"
-						}, {
-							"list2": "風俗"
-						}, {
-							"list2": "節慶"
-						}, {
-							"list2": "信仰歲時節日"
-						}, {
-							"list2": "信仰-祭典儀式"
-						}
-					]
-				}
-			]
-		}, {
-			"list0": "連江縣",
-			"childeren0": [{
-					"list1": "民俗",
-					"childeren1": [{
-							"list2": "信仰"
-						}
-					]
-				}
-			]
-		}
-	]
+{"dropdownName": [{
+    "name": "縣市"
+}, {
+    "name": "資產類別"
+}, {
+    "name": "資產種類"
 }
+],
+"lists":[{"list0":"臺北市","childeren0":[{"list1":"民俗","childeren1":[{
+    "list2":  "信仰"
+},{
+    "list2":  "節慶"
+}]}]},{"list0":"基隆市","childeren0":[{"list1":"民俗","childeren1":[{
+    "list2":  "節慶"
+}]}]},{"list0":"新北市","childeren0":[{"list1":"民俗","childeren1":[{
+    "list2":  "信仰"
+},{
+    "list2":  "節慶"
+},{
+    "list2":  "風俗"
+}]}]},{"list0":"桃園市","childeren0":[{"list1":"民俗","childeren1":[{
+    "list2":  "信仰"
+}]}]},{"list0":"新竹縣","childeren0":[{"list1":"民俗","childeren1":[{
+    "list2":  "信仰"
+}]}]},{"list0":"苗栗縣","childeren0":[{"list1":"民俗","childeren1":[{
+    "list2":  "信仰"
+},{
+    "list2":  "節慶"
+},{
+    "list2":  "風俗"
+}]}]},{"list0":"臺中市","childeren0":[{"list1":"民俗","childeren1":[{
+    "list2":  "信仰"
+},{
+    "list2":  "風俗"
+}]}]},{"list0":"彰化縣","childeren0":[{"list1":"民俗","childeren1":[{
+    "list2":  "節慶"
+},{
+    "list2":  "信仰"
+},{
+    "list2":  "風俗"
+}]}]},{"list0":"南投縣","childeren0":[{"list1":"民俗","childeren1":[{
+    "list2":  "信仰"
+},{
+    "list2":  "風俗"
+}]}]},{"list0":"雲林縣","childeren0":[{"list1":"民俗","childeren1":[{
+    "list2":  "信仰"
+}]}]},{"list0":"嘉義市","childeren0":[{"list1":"民俗","childeren1":[{
+    "list2":  "節慶"
+}]}]},{"list0":"嘉義縣","childeren0":[{"list1":"民俗","childeren1":[{
+    "list2":  "風俗"
+},{
+    "list2":  "信仰"
+},{
+    "list2":  "信仰儀式、祭典、節慶"
+}]}]},{"list0":"臺南市","childeren0":[{"list1":"民俗","childeren1":[{
+    "list2":  "風俗"
+},{
+    "list2":  "信仰"
+},{
+    "list2":  "節慶"
+}]}]},{"list0":"高雄市","childeren0":[{"list1":"民俗","childeren1":[{
+    "list2":  "信仰"
+},{
+    "list2":  "風俗"
+}]}]},{"list0":"屏東縣","childeren0":[{"list1":"民俗","childeren1":[{
+    "list2":  "節慶"
+},{
+    "list2":  "信仰"
+},{
+    "list2":  "風俗"
+},{
+    "list2":  "節慶信仰及相關文物"
+}]}]},{"list0":"澎湖縣","childeren0":[{"list1":"民俗","childeren1":[{
+    "list2":  "風俗"
+},{
+    "list2":  "信仰"
+}]}]},{"list0":"花蓮縣","childeren0":[{"list1":"民俗","childeren1":[{
+    "list2":  "信仰"
+}]}]},{"list0":"金門縣","childeren0":[{"list1":"民俗","childeren1":[{
+    "list2":  "信仰"
+},{
+    "list2":  "風俗"
+},{
+    "list2":  "節慶"
+},{
+    "list2":  "信仰歲時節日"
+},{
+    "list2":  "信仰-祭典儀式"
+}]}]},{"list0":"連江縣","childeren0":[{"list1":"民俗","childeren1":[{
+    "list2":  "信仰"
+}]}]}]}
