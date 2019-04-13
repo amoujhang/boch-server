@@ -1,43 +1,43 @@
 
 var express = require('express')
-var bodyParser = require('body-parser')
-var request = require('request');
+	var bodyParser = require('body-parser')
+	var request = require('request');
 var jsonQuery = require('json-query')
-var dir = require('node-dir');
+	var dir = require('node-dir');
 const path = require('path');
 const fs = require('fs');
 const sharp = require('sharp');
 //var dropdowns = require('./data/Dropdowns.json')
 var droplists = require('./data/DropLists.json')
-var droplistsmenu2 = require('./data/DropListsMenu2.json')
-var locations = require('./data/Locations.json')
-var classes = require('./data/Classes.json')
-var lives = require('./data/Lives.json')
-var infos = require('./data/Infos.json')
-var urls = require('./data/Urls.json')
-var ss = require('./data/SlideShow.json')
-var success = require('./data/success.json')
-var fail = require('./data/fail.json')
-var flyput = require('./data/flyPutDataGen.json')
-var config = require('./config.js');
+	var droplistsmenu2 = require('./data/DropListsMenu2.json')
+	var locations = require('./data/Locations.json')
+	var classes = require('./data/Classes.json')
+	var lives = require('./data/Lives.json')
+	var infos = require('./data/Infos.json')
+	var urls = require('./data/Urls.json')
+	var ss = require('./data/SlideShow.json')
+	var success = require('./data/success.json')
+	var fail = require('./data/fail.json')
+	var flyput = require('./data/flyPutDataGen.json')
+	var config = require('./config.js');
 
 var app = express();
 
+var wallUrl = "http://" + config.serverIp + ":" + config.port + "/static/wall/";
+var flyputUrl = "http://" + config.serverIp + ":" + config.port + "/static/flyput/";
+var VRUrl = "http://" + config.serverIp + ":" + config.port + "/static/VR/"
 
-var wallUrl = "http://"+config.serverIp+":"+config.port+"/static/wall/";
-var flyputUrl = "http://"+config.serverIp+":"+config.port+"/static/flyput/";
-var VRUrl = "http://"+config.serverIp+":"+config.port+"/static/VR/"
-
-
-app.use(bodyParser.urlencoded({extended:true}));
+	app.use(bodyParser.urlencoded({
+			extended: true
+		}));
 app.use(bodyParser.json());
 app.use('/static', express.static(config.staticPath));
 
 var listener = app.listen(config.port, function () {
-	console.log("app is running on port " + config.port);
-})
+		console.log("app is running on port " + config.port);
+	})
 
-function sendJson(Data){
+function sendJson(Data) {
 	var clientServerOptions = {
 		uri: 'http://13share.me:8100/mqtt',
 		body: JSON.stringify(Data),
@@ -47,400 +47,405 @@ function sendJson(Data){
 		}
 	}
 	request(clientServerOptions, function (error, response) {
-		console.log(error,response.body);
+		console.log(error, response.body);
 		return;
 	});
 }
 
-
-
-
-app.get('/file',function(req, res, next) {
+app.get('/file', function (req, res, next) {
 
 	const directoryPath = path.join(__dirname, 'public/panos');
 
-	dir.files(directoryPath, function(err, files) {
-		if (err) throw err;
+	dir.files(directoryPath, function (err, files) {
+		if (err)
+			throw err;
 
 		res.json(files);
 
 	});
 
-
 })
 
-
-
-
-app.post('/login',function(req, res, next) {
+app.post('/login', function (req, res, next) {
 	var ac = req.body.ac;
 	var pw = req.body.pw;
 	console.log("login");
-	if(ac == "admin" && pw == "1234") {
-		res.json({"IsSuccess":true,"Message":""});
-	}
-	else {
-		res.json({"IsSuccess":false,"Message":"帳號密碼有誤"});
+	if (ac == "admin" && pw == "1234") {
+		res.json({
+			"IsSuccess": true,
+			"Message": ""
+		});
+	} else {
+		res.json({
+			"IsSuccess": false,
+			"Message": "帳號密碼有誤"
+		});
 	}
 })
 
 //270============================================================================
 
 
-
-
-
 //SS======================================
 
 
-app.get('/ss',function(req, res, next) {
+app.get('/ss', function (req, res, next) {
 	console.log("Get Slideshow");
-	res.json(ss);  
+	res.json(ss);
 })
 
+app.post('/ss', function (req, res, next) {
 
-app.post('/ss',function(req, res, next) {
-	
 	console.log(req.body)
 
-	var s  = {
-		access_token:"asd12rl;3k2eo1kejf",
-		topic:"boch/270/idle/open",
-		payload:JSON.stringify(req.body)};
+	var s = {
+		access_token: "asd12rl;3k2eo1kejf",
+		topic: "boch/270/idle/open",
+		payload: JSON.stringify(req.body)
+	};
 
-		sendJson(s);
+	sendJson(s);
 
-		res.json(success);  
-	})
+	res.json(success);
+})
 
 //DP======================================
 
-app.get('/dplists',function(req, res, next) {	
-	console.log("Dp query : " +req.query.id+";");
-      //  res.json(success);  
-	if(req.query.id == '0' || req.query.id == '2')
-	{
-		res.json(droplists);  	
+app.get('/dplists', function (req, res, next) {
+	console.log("Dp query : " + req.query.id + ";");
+	//  res.json(success);
+	if (req.query.id == '0' || req.query.id == '2') {
+		dropid = req.query.id
+			res.json(droplists);
 	} else {
-		res.json(droplistsmenu2);  	
+		dropid = req.query.id
+			res.json(droplistsmenu2);
 	}
-//res.json(small);  
+	//res.json(small);
 })
 
-function makeFlyput(data){
+function makeFlyput(data) {
 
 	var newData = JSON.parse(JSON.stringify(data));
 
-// Change server url
-for(var i  = 0 ; i < newData.length ;i++){
+	// Change server url
+	for (var i = 0; i < newData.length; i++) {
 
-	var unwanted = "E:/Downloads/boch-image/";
-	newData[i].cover_url = newData[i].cover_url.replace(unwanted,flyputUrl);				
+		var unwanted = "E:/Downloads/boch-image/";
+		newData[i].cover_url = newData[i].cover_url.replace(unwanted, flyputUrl);
 
-	for(var j  = 0 ; j < newData[i].panorama_list.length ;j++){
+		for (var j = 0; j < newData[i].panorama_list.length; j++) {
 
-		newData[i].panorama_list[j].thumb = flyputUrl + data[i].panorama_list[j].thumb;	
-		newData[i].panorama_list[j].path = flyputUrl+   data[i].panorama_list[j].path;	
+			newData[i].panorama_list[j].thumb = flyputUrl + data[i].panorama_list[j].thumb;
+			newData[i].panorama_list[j].path = flyputUrl + data[i].panorama_list[j].path;
+		}
+
 	}
 
+	// Add rootObject
+	var dataJson = {};
+	dataJson.locations = newData;
+
+	return dataJson;
 }
 
-// Add rootObject
-var dataJson ={};	
-dataJson.locations = newData;
+var dropid = 0
+	var id0 = 0
+	var id1 = 0
+	var id2 = 0
+	var id3 = 0
 
-return dataJson;
-}
+	app.get('/fly', function (req, res, next) {
+		// /loc?id0=0&id1=0&id2=0&id3=0
+		//http://localhost:3000/locs?id0=0&id1=8&id2=12&id3=1
+		console.log("Wf query : " + id0 + "," + id1 + "," + id2 + "," + id3 + ";");
 
-var id0 = 0
-var id1 = 0
-var id2 = 0
-var id3 = 0
+		var usedp = ''
+			if (dropid == '0' || dropid == '2') {
+				usedp = droplists;
+			} else {
+				usedp = droplistsmenu2;
+			}
 
-app.get('/fly',function(req, res, next) {
-	// /loc?id0=0&id1=0&id2=0&id3=0
-	//http://localhost:3000/locs?id0=0&id1=8&id2=12&id3=1
-	console.log("Wf query : " +id0+","+id1+","+id2+","+id3+";");
+			var fil0 = usedp.lists[id1].list0;
+		var fil1 = usedp.lists[id1].childeren0[id2].list1;
+		var fil2 = usedp.lists[id1].childeren0[id2].childeren1[id3].list2;
 
-	var fil0 = droplists.lists[id1].list0;
-	var fil1 = droplists.lists[id1].childeren0[id2].list1;
-	var fil2 = droplists.lists[id1].childeren0[id2].childeren1[id3].list2;
-	console.log("Wf query : " +fil0+","+fil1+","+fil2+";");
+		console.log("Wf query : " + fil0 + "," + fil1 + "," + fil2 + ";");
 
-	var result = jsonQuery('[* list0='+fil0+' && list1='+fil1+' && list2='+fil2+']', {
-		data: flyput
-	}).value;
-	//console.log(result);
+		var result = jsonQuery('[* list0=' + fil0 + ' && list1=' + fil1 + ' && list2=' + fil2 + ']', {
+				data: flyput
+			}).value;
+		//console.log(result);
+		res.json(makeFlyput(result));
+
+		//res.json(locations);  testing file
+	})
+
+	app.get('/locs', function (req, res, next) {
+		// /loc?id0=0&id1=0&id2=0&id3=0
+		//http://localhost:3000/locs?id0=0&id1=8&id2=12&id3=1
+		id0 = req.query.id0
+			id1 = req.query.id1
+			id2 = req.query.id2
+			id3 = req.query.id3
+			console.log("Wf query : " + req.query.id0 + "," + req.query.id1 + "," + req.query.id2 + "," + req.query.id3 + ";");
+		var usedp = ''
+			if (dropid == '0' || dropid == '2') {
+				usedp = droplists;
+			} else {
+				usedp = droplistsmenu2;
+			}
+
+			var fil0 = usedp.lists[id1].list0;
+		var fil1 = usedp.lists[id1].childeren0[id2].list1;
+		var fil2 = usedp.lists[id1].childeren0[id2].childeren1[id3].list2;
+
+		console.log("Wf query : " + fil0 + "," + fil1 + "," + fil2 + ";");
+
+		var result = jsonQuery('[* list0=' + fil0 + ' && list1=' + fil1 + ' && list2=' + fil2 + ']', {
+				data: flyput
+			}).value;
+		//console.log(result);
 
 
-	res.json(makeFlyput(result));  
-
-
-
-	//res.json(locations);  testing file
-})
-
-
-app.get('/locs',function(req, res, next) {
-	// /loc?id0=0&id1=0&id2=0&id3=0
-	//http://localhost:3000/locs?id0=0&id1=8&id2=12&id3=1
-	id0 = req.query.id0
-	id1 = req.query.id1
-	id2 = req.query.id2
-	id3 = req.query.id3
-	console.log("Wf query : " +req.query.id0+","+req.query.id1+","+req.query.id2+","+req.query.id3+";");
-
-	var fil0 = droplists.lists[req.query.id1].list0;
-	var fil1 = droplists.lists[req.query.id1].childeren0[req.query.id2].list1;
-	var fil2 = droplists.lists[req.query.id1].childeren0[req.query.id2].childeren1[req.query.id3].list2;
-	console.log("Wf query : " +fil0+","+fil1+","+fil2+";");
-
-	var result = jsonQuery('[* list0='+fil0+' && list1='+fil1+' && list2='+fil2+']', {
-		data: flyput
-	}).value;
-
-	//console.log(result);
-
-	
-	var s  = {
-		access_token:"asd12rl;3k2eo1kejf",
-		topic:"boch/270/flyput/content/change",
-		payload:null
-	};
+		var s = {
+			access_token: "asd12rl;3k2eo1kejf",
+			topic: "boch/270/flyput/content/change",
+			payload: null
+		};
 
 		sendJson(s);
-		
-console.log("waterfall Set");
-	res.json(makeFlyput(result));  
 
+		console.log("waterfall Set");
+		res.json(makeFlyput(result));
 
-})
+	})
 
-/*
-app.post('/wf',function(req, res, next) {
+	/*
+	app.post('/wf',function(req, res, next) {
 	console.log("waterfall Set");
 
 	//no payload for now
-	//Todo: send a url 
+	//Todo: send a url
 	var s  = {
-		access_token:"asd12rl;3k2eo1kejf",
-		topic:"boch/270/flyput/content/change",
-		payload:null};
+	access_token:"asd12rl;3k2eo1kejf",
+	topic:"boch/270/flyput/content/change",
+	payload:null};
 
-		sendJson(s);
-		res.json(success); 
+	sendJson(s);
+	res.json(success);
 
 
 	})
-*/
+	 */
 
-app.post('/guide',function(req, res, next) {
-	//receive loc data json	
-	console.log(req.body)
+	app.post('/guide', function (req, res, next) {
+		//receive loc data json
+		console.log(req.body)
 
-	var s  = {
-		access_token:"asd12rl;3k2eo1kejf",
-		topic:"boch/270/flyput/content/show",
-		payload:JSON.stringify(req.body)};
-
-		sendJson(s);
-		
-
-		res.json(success); 
-	})
-
-//TODO : add guide close
-app.post('/guide/close',function(req, res, next) {
-	//receive loc data json	
-	//console.log(req.body)
-
-	var s  = {
-		access_token:"asd12rl;3k2eo1kejf",
-		topic:"boch/270/flyput/pano/closeAllShow",
-		payload:""};
-
-		sendJson(s);		
-
-		res.json(success); 
-	})
-
-
-app.post('/pano',function(req, res, next) {
-	//receive pano jpg json
-	console.log(req.body)
-
-	var s  = {
-		access_token:"asd12rl;3k2eo1kejf",
-		topic:"boch/270/flyput/open",
-		payload:JSON.stringify(req.body)};
+		var s = {
+			access_token: "asd12rl;3k2eo1kejf",
+			topic: "boch/270/flyput/content/show",
+			payload: JSON.stringify(req.body)
+		};
 
 		sendJson(s);
 
-		res.json(success); 
+		res.json(success);
 	})
 
-app.post('/pano/ctrl',function(req, res, next) {
-	//receive 4 dir key info
-	console.log(req.body);
-	var s  = {
-		access_token:"asd12rl;3k2eo1kejf",
-		topic:"boch/270/flyput/control",
-		payload:JSON.stringify(req.body)};
+	//TODO : add guide close
+	app.post('/guide/close', function (req, res, next) {
+		//receive loc data json
+		//console.log(req.body)
+
+		var s = {
+			access_token: "asd12rl;3k2eo1kejf",
+			topic: "boch/270/flyput/pano/closeAllShow",
+			payload: ""
+		};
 
 		sendJson(s);
 
-
-		res.json(success); 
+		res.json(success);
 	})
 
-app.post('/pano/close',function(req, res, next) {
-	//receive pano jpg json
-	console.log(req.body)
+	app.post('/pano', function (req, res, next) {
+		//receive pano jpg json
+		console.log(req.body)
 
-	var s  = {
-		access_token:"asd12rl;3k2eo1kejf",
-		topic:"boch/270/flyput/pano/close",
-		payload:null};
+		var s = {
+			access_token: "asd12rl;3k2eo1kejf",
+			topic: "boch/270/flyput/open",
+			payload: JSON.stringify(req.body)
+		};
 
 		sendJson(s);
 
-		res.json(success); 
+		res.json(success);
 	})
 
+	app.post('/pano/ctrl', function (req, res, next) {
+		//receive 4 dir key info
+		console.log(req.body);
+		var s = {
+			access_token: "asd12rl;3k2eo1kejf",
+			topic: "boch/270/flyput/control",
+			payload: JSON.stringify(req.body)
+		};
 
-//VR======================================
+		sendJson(s);
 
-app.get('/cls',function(req, res, next) {	
+		res.json(success);
+	})
 
+	app.post('/pano/close', function (req, res, next) {
+		//receive pano jpg json
+		console.log(req.body)
+
+		var s = {
+			access_token: "asd12rl;3k2eo1kejf",
+			topic: "boch/270/flyput/pano/close",
+			payload: null
+		};
+
+		sendJson(s);
+
+		res.json(success);
+	})
+
+	//VR======================================
+
+	app.get('/cls', function (req, res, next) {
 
 		var newData = JSON.parse(JSON.stringify(classes));
 
-// Insert server url
-for(var i  = 0 ; i < newData.classes.length ;i++){					
+		// Insert server url
+		for (var i = 0; i < newData.classes.length; i++) {
 
-	for(var j  = 0 ; j < newData.classes[i].files.length ;j++){
+			for (var j = 0; j < newData.classes[i].files.length; j++) {
 
-		newData.classes[i].files[j].thumb = VRUrl + classes.classes[i].files[j].thumb;	
-		newData.classes[i].files[j].path = VRUrl+   classes.classes[i].files[j].path;	
-	}
+				newData.classes[i].files[j].thumb = VRUrl + classes.classes[i].files[j].thumb;
+				newData.classes[i].files[j].path = VRUrl + classes.classes[i].files[j].path;
+			}
 
-}
+		}
 
-	res.json(newData);  
+		res.json(newData);
 
-
-})
-
-app.post('/vr',function(req, res, next) {
-	console.log(req.body)
-	var s  = {
-		access_token:"asd12rl;3k2eo1kejf",
-		topic:"boch/270/vr/open",
-		payload:JSON.stringify(req.body)};
-
-		sendJson(s);
-		res.json(success); 
 	})
 
-app.post('/vr/ctrl',function(req, res, next) {
-	//receive 4 dir key info	
-	console.log(req.body);
-
-	var s  = {
-		access_token:"asd12rl;3k2eo1kejf",
-		topic:"boch/270/vr/control",
-		payload:JSON.stringify(req.body)};
+	app.post('/vr', function (req, res, next) {
+		console.log(req.body)
+		var s = {
+			access_token: "asd12rl;3k2eo1kejf",
+			topic: "boch/270/vr/open",
+			payload: JSON.stringify(req.body)
+		};
 
 		sendJson(s);
-		res.json(success); 
+		res.json(success);
 	})
 
+	app.post('/vr/ctrl', function (req, res, next) {
+		//receive 4 dir key info
+		console.log(req.body);
+
+		var s = {
+			access_token: "asd12rl;3k2eo1kejf",
+			topic: "boch/270/vr/control",
+			payload: JSON.stringify(req.body)
+		};
+
+		sendJson(s);
+		res.json(success);
+	})
+
+	//LIVE270======================================
+
+	app.get('/pj/lvs', function (req, res, next) {
+
+		res.json(lives);
+	})
+
+	app.post('/pj/lv', function (req, res, next) {
+
+		//receive  title,lv description,livefeed
+		console.log(req.body)
+		res.json(success);
+	})
+
+	app.post('/pj/lv/ctrl', function (req, res, next) {
+		//receive 4 dir key info
 
 
-//LIVE270======================================
+		console.log("Lv dir" + req.query.dir);
+		res.json(success);
+	})
 
-app.get('/pj/lvs',function(req, res, next) {	
+	//Exe=====================
+	app.post('/wf/exe', function (req, res, next) {
 
-	res.json(lives);  
-})
+		console.log(req.body)
 
-app.post('/pj/lv',function(req, res, next) {
-
-
-	//receive  title,lv description,livefeed 
-	console.log(req.body)
-	res.json(success); 
-})
-
-app.post('/pj/lv/ctrl',function(req, res, next) {
-	//receive 4 dir key info
-
-
-	console.log("Lv dir" + req.query.dir);
-	res.json(success); 
-})
-
-
-//Exe=====================
-app.post('/wf/exe',function(req, res, next) {
-	
-	console.log(req.body)
-
-	var s  = {
-		access_token:"asd12rl;3k2eo1kejf",
-		topic:"boch/270/flyput/exe",
-		payload:""};
+		var s = {
+			access_token: "asd12rl;3k2eo1kejf",
+			topic: "boch/270/flyput/exe",
+			payload: ""
+		};
 
 		sendJson(s);
 
-		res.json(success);  
+		res.json(success);
 	})
 
-app.post('/vr/exe',function(req, res, next) {
-	
-	console.log(req.body)
+	app.post('/vr/exe', function (req, res, next) {
 
-	var s  = {
-		access_token:"asd12rl;3k2eo1kejf",
-		topic:"boch/270/vr/exe",
-		payload:""};
+		console.log(req.body)
+
+		var s = {
+			access_token: "asd12rl;3k2eo1kejf",
+			topic: "boch/270/vr/exe",
+			payload: ""
+		};
 
 		sendJson(s);
 
-		res.json(success);  
+		res.json(success);
 	})
 
-app.post('/pj/lv/exe',function(req, res, next) {
-	
-	console.log(req.body)
+	app.post('/pj/lv/exe', function (req, res, next) {
 
-	var s  = {
-		access_token:"asd12rl;3k2eo1kejf",
-		topic:"boch/270/lv/exe",
-		payload:""};
+		console.log(req.body)
+
+		var s = {
+			access_token: "asd12rl;3k2eo1kejf",
+			topic: "boch/270/lv/exe",
+			payload: ""
+		};
 
 		sendJson(s);
 
-		res.json(success);  
+		res.json(success);
 	})
 
+	//TO============================================================================
 
-//TO============================================================================
+	//INFO=========================================
 
-//INFO=========================================
-
-function addWallUrl(data){
+function addWallUrl(data) {
 
 	var newData = JSON.parse(JSON.stringify(data));
 
-	for(var i  = 0 ; i < newData.infos.length ;i++){
+	for (var i = 0; i < newData.infos.length; i++) {
 
-		for(var j  = 0 ; j < newData.infos[i].Datas.length ;j++){
+		for (var j = 0; j < newData.infos[i].Datas.length; j++) {
 
-			for(var k  = 0 ; k < newData.infos[i].Datas[j].medias.length ;k++){
+			for (var k = 0; k < newData.infos[i].Datas[j].medias.length; k++) {
 
-				newData.infos[i].Datas[j].medias[k].url = wallUrl +data.infos[i].Datas[j].medias[k].url;	
-				newData.infos[i].Datas[j].medias[k].thumbnail = wallUrl +data.infos[i].Datas[j].medias[k].thumbnail;	
+				newData.infos[i].Datas[j].medias[k].url = wallUrl + data.infos[i].Datas[j].medias[k].url;
+				newData.infos[i].Datas[j].medias[k].thumbnail = wallUrl + data.infos[i].Datas[j].medias[k].thumbnail;
 
 			}
 		}
@@ -448,185 +453,181 @@ function addWallUrl(data){
 	return newData;
 }
 
-
-app.get('/ifs',function(req, res, next) {	
+app.get('/ifs', function (req, res, next) {
 	// /if?id=0~1
 	console.log("infos query:" + req.query.id);
 
-
-	res.json(addWallUrl(infos));  
-//res.json(infosOld);  
+	res.json(addWallUrl(infos));
+	//res.json(infosOld);
 })
 
-app.post('/if',function(req, res, next) {
-	
-	//receive one info pack 
+app.post('/if', function (req, res, next) {
+
+	//receive one info pack
 
 
 	console.log(req.body)
-	
-	var s  = {
-		access_token:"asd12rl;3k2eo1kejf",
-		topic:"boch/wall/class/open",
-		payload:JSON.stringify(req.body)};
 
-		sendJson(s);
-		res.json(success); 
+	var s = {
+		access_token: "asd12rl;3k2eo1kejf",
+		topic: "boch/wall/class/open",
+		payload: JSON.stringify(req.body)
+	};
 
+	sendJson(s);
+	res.json(success);
 
+})
 
+app.post('/if/ctrl', function (req, res, next) {
 
-	})
-
-
-app.post('/if/ctrl',function(req, res, next) {
-	
 	//receive one mode
 	console.log(req.body)
 
-	var s  = {
-		access_token:"asd12rl;3k2eo1kejf",
-		topic:"boch/wall/class/control",
-		payload:JSON.stringify(req.body)};
+	var s = {
+		access_token: "asd12rl;3k2eo1kejf",
+		topic: "boch/wall/class/control",
+		payload: JSON.stringify(req.body)
+	};
 
-		sendJson(s);
-		res.json(success); 
-	})
+	sendJson(s);
+	res.json(success);
+})
 
 //Browse=========================================
 
-app.get('/urls',function(req, res, next) {	
-	res.json(urls);  
+app.get('/urls', function (req, res, next) {
+	res.json(urls);
 })
 
-app.post('/br/open',function(req, res, next) {	
+app.post('/br/open', function (req, res, next) {
 	//receive public url array
 	console.log(req.body)
 
-	var s  = {
-		access_token:"asd12rl;3k2eo1kejf",
-		topic:"boch/wall/public/open",
-		payload:JSON.stringify(req.body)};
+	var s = {
+		access_token: "asd12rl;3k2eo1kejf",
+		topic: "boch/wall/public/open",
+		payload: JSON.stringify(req.body)
+	};
 
-		sendJson(s);
+	sendJson(s);
 
-		res.json(success); 
-	})
+	res.json(success);
+})
 
-app.post('/br/pr',function(req, res, next) {
-	//receive one url	
+app.post('/br/pr', function (req, res, next) {
+	//receive one url
 	console.log(req.body)
-	var s  = {
-		access_token:"asd12rl;3k2eo1kejf",
-		topic:"boch/wall/private/open",
-		payload:JSON.stringify(req.body)};
+	var s = {
+		access_token: "asd12rl;3k2eo1kejf",
+		topic: "boch/wall/private/open",
+		payload: JSON.stringify(req.body)
+	};
 
-		sendJson(s);
+	sendJson(s);
 
-		res.json(success); 
-	})
+	res.json(success);
+})
 
-app.post('/br/pr/login',function(req, res, next) {
+app.post('/br/pr/login', function (req, res, next) {
 	//receive ac, pw , code
 	console.log(req.body)
 
-	var s  = {
-		access_token:"asd12rl;3k2eo1kejf",
-		topic:"boch/wall/private/login",
-		payload:JSON.stringify(req.body)};
+	var s = {
+		access_token: "asd12rl;3k2eo1kejf",
+		topic: "boch/wall/private/login",
+		payload: JSON.stringify(req.body)
+	};
 
-		sendJson(s);
+	sendJson(s);
 
-		res.json(success); 
-	})
-app.post('/br/pr/logout',function(req, res, next) {
+	res.json(success);
+})
+app.post('/br/pr/logout', function (req, res, next) {
 	console.log("logout")
-	var s  = {
-		access_token:"asd12rl;3k2eo1kejf",
-		topic:"boch/wall/private/logout",
-		payload:JSON.stringify(req.body)};
+	var s = {
+		access_token: "asd12rl;3k2eo1kejf",
+		topic: "boch/wall/private/logout",
+		payload: JSON.stringify(req.body)
+	};
 
-		sendJson(s);
+	sendJson(s);
 
-		res.json(success); 
-	})
+	res.json(success);
+})
 
 //LIVETouch======================================
 
-app.get('/to/lvs',function(req, res, next) {	
+app.get('/to/lvs', function (req, res, next) {
 
-	res.json(lives);  
+	res.json(lives);
 })
 
-app.post('/to/lv',function(req, res, next) {
+app.post('/to/lv', function (req, res, next) {
 
-	//receive  title,lv description,livefeed 
+	//receive  title,lv description,livefeed
 	console.log(req.body)
-	res.json(success); 
+	res.json(success);
 })
 
-app.post('/to/lv/ctrl',function(req, res, next) {
+app.post('/to/lv/ctrl', function (req, res, next) {
 	//receive 4 dir key info
 
 
 	console.log("Lv dir" + req.query.dir);
-	res.json(success); 
+	res.json(success);
 })
-
-
-
 
 //Exe=====================
-app.post('/if/exe',function(req, res, next) {
-	
+app.post('/if/exe', function (req, res, next) {
+
 	console.log(req.body)
 
-	var s  = {
-		access_token:"asd12rl;3k2eo1kejf",
-		topic:"boch/wall/class/exe",
-		payload:""};
+	var s = {
+		access_token: "asd12rl;3k2eo1kejf",
+		topic: "boch/wall/class/exe",
+		payload: ""
+	};
 
-		sendJson(s);
+	sendJson(s);
 
-		res.json(success);  
-	})
-
-app.post('/pr/exe',function(req, res, next) {
-	
-	console.log(req.body)
-
-	var s  = {
-		access_token:"asd12rl;3k2eo1kejf",
-		topic:"boch/wall/private/exe",
-		payload:""};
-
-		sendJson(s);
-
-		res.json(success);  
-	})
-
-app.post('/to/lv/exe',function(req, res, next) {
-	
-	console.log(req.body)
-
-	var s  = {
-		access_token:"asd12rl;3k2eo1kejf",
-		topic:"boch/wall/lv/exe",
-		payload:""};
-
-		sendJson(s);
-
-		res.json(success);  
-	})
-
-
-
-
-app.get('/*',function(req, res, next) {
-	res.json(fail);  
+	res.json(success);
 })
 
-app.post('/*',function(req, res, next) {
-	res.json(fail);  
+app.post('/pr/exe', function (req, res, next) {
+
+	console.log(req.body)
+
+	var s = {
+		access_token: "asd12rl;3k2eo1kejf",
+		topic: "boch/wall/private/exe",
+		payload: ""
+	};
+
+	sendJson(s);
+
+	res.json(success);
 })
 
+app.post('/to/lv/exe', function (req, res, next) {
+
+	console.log(req.body)
+
+	var s = {
+		access_token: "asd12rl;3k2eo1kejf",
+		topic: "boch/wall/lv/exe",
+		payload: ""
+	};
+
+	sendJson(s);
+
+	res.json(success);
+})
+
+app.get('/*', function (req, res, next) {
+	res.json(fail);
+})
+
+app.post('/*', function (req, res, next) {
+	res.json(fail);
+})
