@@ -115,11 +115,9 @@ app.get('/dplists', function (req, res, next) {
 	console.log("Dp query : " + req.query.id + ";");
 	//  res.json(success);
 	if (req.query.id == '0' || req.query.id == '2') {
-		dropid = req.query.id
-			res.json(droplists);
+		res.json(droplists);
 	} else {
-		dropid = req.query.id
-			res.json(droplistsmenu2);
+		res.json(droplistsmenu2);
 	}
 	//res.json(small);
 })
@@ -149,290 +147,289 @@ function makeFlyput(data) {
 	return dataJson;
 }
 
-var dropid = 0
-	var id0 = 0
-	var id1 = 0
-	var id2 = 0
-	var id3 = 0
+var id0 = 0;
+var id1 = 0;
+var id2 = 0;
+var id3 = 0;
 
-	app.get('/fly', function (req, res, next) {
-		// /loc?id0=0&id1=0&id2=0&id3=0
-		//http://localhost:3000/locs?id0=0&id1=8&id2=12&id3=1
-		console.log("Wf query : " + id0 + "," + id1 + "," + id2 + "," + id3 + ";");
+app.get('/fly', function (req, res, next) {
+	// /loc?id0=0&id1=0&id2=0&id3=0
+	//http://localhost:3000/locs?id0=0&id1=8&id2=12&id3=1
+	console.log("Wf query : " + id0 + "," + id1 + "," + id2 + "," + id3 + ";");
 
-		var usedp = ''
-			if (dropid == '0' || dropid == '2') {
-				usedp = droplists;
-			} else {
-				usedp = droplistsmenu2;
-			}
+	var usedp = '';
+	if (id0 == 0 || id0 == 2) {
+		usedp = droplists;
+	} else {
+		usedp = droplistsmenu2;
+	}
 
-			var fil0 = usedp.lists[id1].list0;
-		var fil1 = usedp.lists[id1].childeren0[id2].list1;
-		var fil2 = usedp.lists[id1].childeren0[id2].childeren1[id3].list2;
+	var fil0 = usedp.lists[id1].list0;
+	var fil1 = usedp.lists[id1].childeren0[id2].list1;
+	var fil2 = usedp.lists[id1].childeren0[id2].childeren1[id3].list2;
 
-		console.log("Wf query : " + fil0 + "," + fil1 + "," + fil2 + ";");
+	console.log("Wf query : " + fil0 + "," + fil1 + "," + fil2 + ";");
 
-		var result = jsonQuery('[* list0=' + fil0 + ' && list1=' + fil1 + ' && list2=' + fil2 + ']', {
-				data: flyput
-			}).value;
-		//console.log(result);
-		res.json(makeFlyput(result));
+	var result = jsonQuery('[* list0=' + fil0 + ' && list1=' + fil1 + ' && list2=' + fil2 + ']', {
+			data: flyput
+		}).value;
+	//console.log(result);
+	res.json(makeFlyput(result));
 
-		//res.json(locations);  testing file
-	})
+	//res.json(locations);  testing file
+})
 
-	app.get('/locs', function (req, res, next) {
-		// /loc?id0=0&id1=0&id2=0&id3=0
-		//http://localhost:3000/locs?id0=0&id1=8&id2=12&id3=1
-		id0 = req.query.id0
-			id1 = req.query.id1
-			id2 = req.query.id2
-			id3 = req.query.id3
-			console.log("Wf query : " + req.query.id0 + "," + req.query.id1 + "," + req.query.id2 + "," + req.query.id3 + ";");
-		var usedp = ''
-			if (dropid == '0' || dropid == '2') {
-				usedp = droplists;
-			} else {
-				usedp = droplistsmenu2;
-			}
+app.get('/locs', function (req, res, next) {
+	// /loc?id0=0&id1=0&id2=0&id3=0
+	//http://localhost:3000/locs?id0=0&id1=8&id2=12&id3=1
+	id0 = req.query.id0;
+	id1 = req.query.id1;
+	id2 = req.query.id2;
+	id3 = req.query.id3;
+	console.log("Wf query : " + req.query.id0 + "," + req.query.id1 + "," + req.query.id2 + "," + req.query.id3 + ";");
+	var usedp = '';
+	if (id0 == 0 || id0 == 2) {
+		usedp = droplists;
+	} else {
+		usedp = droplistsmenu2;
+	}
 
-			var fil0 = usedp.lists[id1].list0;
-		var fil1 = usedp.lists[id1].childeren0[id2].list1;
-		var fil2 = usedp.lists[id1].childeren0[id2].childeren1[id3].list2;
+	var fil0 = usedp.lists[id1].list0;
+	var fil1 = usedp.lists[id1].childeren0[id2].list1;
+	var fil2 = usedp.lists[id1].childeren0[id2].childeren1[id3].list2;
 
-		console.log("Wf query : " + fil0 + "," + fil1 + "," + fil2 + ";");
+	console.log("Wf query : " + fil0 + "," + fil1 + "," + fil2 + ";");
 
-		var result = jsonQuery('[* list0=' + fil0 + ' && list1=' + fil1 + ' && list2=' + fil2 + ']', {
-				data: flyput
-			}).value;
-		//console.log(result);
+	var result = jsonQuery('[* list0=' + fil0 + ' && list1=' + fil1 + ' && list2=' + fil2 + ']', {
+			data: flyput
+		}).value;
+	//console.log(result);
 
 
-		var s = {
-			access_token: "asd12rl;3k2eo1kejf",
-			topic: "boch/270/flyput/content/change",
-			payload: null
-		};
+	var s = {
+		access_token: "asd12rl;3k2eo1kejf",
+		topic: "boch/270/flyput/content/change",
+		payload: null
+	};
 
-		sendJson(s);
+	sendJson(s);
 
-		console.log("waterfall Set");
-		res.json(makeFlyput(result));
-
-	})
-
-	/*
-	app.post('/wf',function(req, res, next) {
 	console.log("waterfall Set");
+	res.json(makeFlyput(result));
 
-	//no payload for now
-	//Todo: send a url
-	var s  = {
-	access_token:"asd12rl;3k2eo1kejf",
-	topic:"boch/270/flyput/content/change",
-	payload:null};
+})
+
+/*
+app.post('/wf',function(req, res, next) {
+console.log("waterfall Set");
+
+//no payload for now
+//Todo: send a url
+var s  = {
+access_token:"asd12rl;3k2eo1kejf",
+topic:"boch/270/flyput/content/change",
+payload:null};
+
+sendJson(s);
+res.json(success);
+
+
+})
+ */
+
+app.post('/guide', function (req, res, next) {
+	//receive loc data json
+	console.log(req.body)
+
+	var s = {
+		access_token: "asd12rl;3k2eo1kejf",
+		topic: "boch/270/flyput/content/show",
+		payload: JSON.stringify(req.body)
+	};
+
+	sendJson(s);
+
+	res.json(success);
+})
+
+//TODO : add guide close
+app.post('/guide/close', function (req, res, next) {
+	//receive loc data json
+	//console.log(req.body)
+
+	var s = {
+		access_token: "asd12rl;3k2eo1kejf",
+		topic: "boch/270/flyput/pano/closeAllShow",
+		payload: ""
+	};
+
+	sendJson(s);
+
+	res.json(success);
+})
+
+app.post('/pano', function (req, res, next) {
+	//receive pano jpg json
+	console.log(req.body)
+
+	var s = {
+		access_token: "asd12rl;3k2eo1kejf",
+		topic: "boch/270/flyput/open",
+		payload: JSON.stringify(req.body)
+	};
+
+	sendJson(s);
+
+	res.json(success);
+})
+
+app.post('/pano/ctrl', function (req, res, next) {
+	//receive 4 dir key info
+	console.log(req.body);
+	var s = {
+		access_token: "asd12rl;3k2eo1kejf",
+		topic: "boch/270/flyput/control",
+		payload: JSON.stringify(req.body)
+	};
+
+	sendJson(s);
+
+	res.json(success);
+})
+
+app.post('/pano/close', function (req, res, next) {
+	//receive pano jpg json
+	console.log(req.body)
+
+	var s = {
+		access_token: "asd12rl;3k2eo1kejf",
+		topic: "boch/270/flyput/pano/close",
+		payload: null
+	};
+
+	sendJson(s);
+
+	res.json(success);
+})
+
+//VR======================================
+
+app.get('/cls', function (req, res, next) {
+
+	var newData = JSON.parse(JSON.stringify(classes));
+
+	// Insert server url
+	for (var i = 0; i < newData.classes.length; i++) {
+
+		for (var j = 0; j < newData.classes[i].files.length; j++) {
+
+			newData.classes[i].files[j].thumb = VRUrl + classes.classes[i].files[j].thumb;
+			newData.classes[i].files[j].path = VRUrl + classes.classes[i].files[j].path;
+		}
+
+	}
+
+	res.json(newData);
+
+})
+
+app.post('/vr', function (req, res, next) {
+	console.log(req.body)
+	var s = {
+		access_token: "asd12rl;3k2eo1kejf",
+		topic: "boch/270/vr/open",
+		payload: JSON.stringify(req.body)
+	};
 
 	sendJson(s);
 	res.json(success);
+})
+
+app.post('/vr/ctrl', function (req, res, next) {
+	//receive 4 dir key info
+	console.log(req.body);
+
+	var s = {
+		access_token: "asd12rl;3k2eo1kejf",
+		topic: "boch/270/vr/control",
+		payload: JSON.stringify(req.body)
+	};
+
+	sendJson(s);
+	res.json(success);
+})
+
+//LIVE270======================================
+
+app.get('/pj/lvs', function (req, res, next) {
+
+	res.json(lives);
+})
+
+app.post('/pj/lv', function (req, res, next) {
+
+	//receive  title,lv description,livefeed
+	console.log(req.body)
+	res.json(success);
+})
+
+app.post('/pj/lv/ctrl', function (req, res, next) {
+	//receive 4 dir key info
 
 
-	})
-	 */
+	console.log("Lv dir" + req.query.dir);
+	res.json(success);
+})
 
-	app.post('/guide', function (req, res, next) {
-		//receive loc data json
-		console.log(req.body)
+//Exe=====================
+app.post('/wf/exe', function (req, res, next) {
 
-		var s = {
-			access_token: "asd12rl;3k2eo1kejf",
-			topic: "boch/270/flyput/content/show",
-			payload: JSON.stringify(req.body)
-		};
+	console.log(req.body)
 
-		sendJson(s);
+	var s = {
+		access_token: "asd12rl;3k2eo1kejf",
+		topic: "boch/270/flyput/exe",
+		payload: ""
+	};
 
-		res.json(success);
-	})
+	sendJson(s);
 
-	//TODO : add guide close
-	app.post('/guide/close', function (req, res, next) {
-		//receive loc data json
-		//console.log(req.body)
+	res.json(success);
+})
 
-		var s = {
-			access_token: "asd12rl;3k2eo1kejf",
-			topic: "boch/270/flyput/pano/closeAllShow",
-			payload: ""
-		};
+app.post('/vr/exe', function (req, res, next) {
 
-		sendJson(s);
+	console.log(req.body)
 
-		res.json(success);
-	})
+	var s = {
+		access_token: "asd12rl;3k2eo1kejf",
+		topic: "boch/270/vr/exe",
+		payload: ""
+	};
 
-	app.post('/pano', function (req, res, next) {
-		//receive pano jpg json
-		console.log(req.body)
+	sendJson(s);
 
-		var s = {
-			access_token: "asd12rl;3k2eo1kejf",
-			topic: "boch/270/flyput/open",
-			payload: JSON.stringify(req.body)
-		};
+	res.json(success);
+})
 
-		sendJson(s);
+app.post('/pj/lv/exe', function (req, res, next) {
 
-		res.json(success);
-	})
+	console.log(req.body)
 
-	app.post('/pano/ctrl', function (req, res, next) {
-		//receive 4 dir key info
-		console.log(req.body);
-		var s = {
-			access_token: "asd12rl;3k2eo1kejf",
-			topic: "boch/270/flyput/control",
-			payload: JSON.stringify(req.body)
-		};
+	var s = {
+		access_token: "asd12rl;3k2eo1kejf",
+		topic: "boch/270/lv/exe",
+		payload: ""
+	};
 
-		sendJson(s);
+	sendJson(s);
 
-		res.json(success);
-	})
+	res.json(success);
+})
 
-	app.post('/pano/close', function (req, res, next) {
-		//receive pano jpg json
-		console.log(req.body)
+//TO============================================================================
 
-		var s = {
-			access_token: "asd12rl;3k2eo1kejf",
-			topic: "boch/270/flyput/pano/close",
-			payload: null
-		};
-
-		sendJson(s);
-
-		res.json(success);
-	})
-
-	//VR======================================
-
-	app.get('/cls', function (req, res, next) {
-
-		var newData = JSON.parse(JSON.stringify(classes));
-
-		// Insert server url
-		for (var i = 0; i < newData.classes.length; i++) {
-
-			for (var j = 0; j < newData.classes[i].files.length; j++) {
-
-				newData.classes[i].files[j].thumb = VRUrl + classes.classes[i].files[j].thumb;
-				newData.classes[i].files[j].path = VRUrl + classes.classes[i].files[j].path;
-			}
-
-		}
-
-		res.json(newData);
-
-	})
-
-	app.post('/vr', function (req, res, next) {
-		console.log(req.body)
-		var s = {
-			access_token: "asd12rl;3k2eo1kejf",
-			topic: "boch/270/vr/open",
-			payload: JSON.stringify(req.body)
-		};
-
-		sendJson(s);
-		res.json(success);
-	})
-
-	app.post('/vr/ctrl', function (req, res, next) {
-		//receive 4 dir key info
-		console.log(req.body);
-
-		var s = {
-			access_token: "asd12rl;3k2eo1kejf",
-			topic: "boch/270/vr/control",
-			payload: JSON.stringify(req.body)
-		};
-
-		sendJson(s);
-		res.json(success);
-	})
-
-	//LIVE270======================================
-
-	app.get('/pj/lvs', function (req, res, next) {
-
-		res.json(lives);
-	})
-
-	app.post('/pj/lv', function (req, res, next) {
-
-		//receive  title,lv description,livefeed
-		console.log(req.body)
-		res.json(success);
-	})
-
-	app.post('/pj/lv/ctrl', function (req, res, next) {
-		//receive 4 dir key info
-
-
-		console.log("Lv dir" + req.query.dir);
-		res.json(success);
-	})
-
-	//Exe=====================
-	app.post('/wf/exe', function (req, res, next) {
-
-		console.log(req.body)
-
-		var s = {
-			access_token: "asd12rl;3k2eo1kejf",
-			topic: "boch/270/flyput/exe",
-			payload: ""
-		};
-
-		sendJson(s);
-
-		res.json(success);
-	})
-
-	app.post('/vr/exe', function (req, res, next) {
-
-		console.log(req.body)
-
-		var s = {
-			access_token: "asd12rl;3k2eo1kejf",
-			topic: "boch/270/vr/exe",
-			payload: ""
-		};
-
-		sendJson(s);
-
-		res.json(success);
-	})
-
-	app.post('/pj/lv/exe', function (req, res, next) {
-
-		console.log(req.body)
-
-		var s = {
-			access_token: "asd12rl;3k2eo1kejf",
-			topic: "boch/270/lv/exe",
-			payload: ""
-		};
-
-		sendJson(s);
-
-		res.json(success);
-	})
-
-	//TO============================================================================
-
-	//INFO=========================================
+//INFO=========================================
 
 function addWallUrl(data) {
 
