@@ -9,6 +9,7 @@ const fs = require('fs');
 const sharp = require('sharp');
 //var dropdowns = require('./data/Dropdowns.json')
 var droplists = require('./data/DropLists.json')
+var droplistsmenu2 = require('./data/DropListsMenu2.json')
 var locations = require('./data/Locations.json')
 var classes = require('./data/Classes.json')
 var lives = require('./data/Lives.json')
@@ -117,11 +118,13 @@ app.post('/ss',function(req, res, next) {
 app.get('/dplists',function(req, res, next) {	
 	console.log("Dp query : " +req.query.id+";");
       //  res.json(success);  
-
-
+	if(req.query.id == '0' || req.query.id == '2')
+	{
+		res.json(droplists);  	
+	} else {
+		res.json(droplistsmenu2);  	
+	}
 //res.json(small);  
-res.json(droplists);  
-
 })
 
 function makeFlyput(data){
