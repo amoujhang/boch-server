@@ -116,6 +116,16 @@
 				}
 			]
 		}, {
+			"list0": "雲林縣",
+			"childeren0": [{
+					"list1": "民俗",
+					"childeren1": [{
+							"list2": "信仰"
+						}
+					]
+				}
+			]
+		}, {
 			"list0": "嘉義市",
 			"childeren0": [{
 					"list1": "民俗",
@@ -188,6 +198,16 @@
 					"childeren1": [{
 							"list2": "風俗"
 						}, {
+							"list2": "信仰"
+						}
+					]
+				}
+			]
+		}, {
+			"list0": "花蓮縣",
+			"childeren0": [{
+					"list1": "民俗",
+					"childeren1": [{
 							"list2": "信仰"
 						}
 					]
