@@ -183,7 +183,7 @@ app.get('/fly', function (req, res, next) {
 		var fil0 = usedp.lists[id1].list0;
 		console.log("Wf query : " + fil0 + "," + fil1 + "," + fil2 + ";");
 		var result = jsonQuery('[* list0=' + fil0 + ']', {
-				data: flyput
+				data: flyput3
 			}).value;
 		res.json(makeFlyput(result));
 	}
@@ -219,7 +219,7 @@ app.get('/locs', function (req, res, next) {
 		var fil0 = usedp.lists[id1].list0;
 		console.log("Wf query : " + fil0 + "," + fil1 + "," + fil2 + ";");
 		result = jsonQuery('[* list0=' + fil0 + ']', {
-				data: flyput
+				data: flyput3
 			}).value;
 	}
 
