@@ -170,7 +170,7 @@ app.get('/fly', function (req, res, next) {
 		usedp = droplistsmenu3;
 	}
 
-	if (usedp != 2) {
+	if (id0 != 2) {
 		var fil0 = usedp.lists[id1].list0;
 		var fil1 = usedp.lists[id1].childeren0[id2].list1;
 		var fil2 = usedp.lists[id1].childeren0[id2].childeren1[id3].list2;
@@ -207,7 +207,7 @@ app.get('/locs', function (req, res, next) {
 		usedp = droplistsmenu3;
 	}
 	var result = '';
-	if (usedp != 2) {
+	if (id0 != 2) {
 		var fil0 = usedp.lists[id1].list0;
 		var fil1 = usedp.lists[id1].childeren0[id2].list1;
 		var fil2 = usedp.lists[id1].childeren0[id2].childeren1[id3].list2;
