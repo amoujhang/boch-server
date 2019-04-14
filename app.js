@@ -116,10 +116,12 @@ app.post('/ss', function (req, res, next) {
 app.get('/dplists', function (req, res, next) {
 	console.log("Dp query : " + req.query.id + ";");
 	//  res.json(success);
-	if (req.query.id == '0' || req.query.id == '2') {
+	if (req.query.id == '0') {
 		res.json(droplists);
-	} else {
+	} else if (req.query.id == '1') {
 		res.json(droplistsmenu2);
+	} else {
+		res.json(droplistsmenu3);
 	}
 	//res.json(small);
 })
