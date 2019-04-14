@@ -87,9 +87,18 @@
     "type":1,
     "path":"3D/TainanLegislative.mov" ,
     "body":"台南州會建於1935年，是為了次年台南官派與民選各半的台南州州會議員所設立的開會場所。本建築為1930年代典型的鋼筋混凝土結構，立面外牆貼有十三溝面磚。本模型呈現1940年代未增建前的風貌。"
+  },
+  {"title":"東沙水下鍋爐",
+    "thumb":"360Vdo/1thumbnail.jpg",      
+    "type":2,
+    "path":"360Vdo/1.mp4" ,
+    "body":"東沙水下鍋爐"
+  },
+  {"title":"探方格",
+    "thumb":"360Vdo/1thumbnail.jpg",      
+    "type":2,
+    "path":"360Vdo/2.mp4" ,
+    "body":"探方格"
   }
-
-
-
   ]}
 ]}
