@@ -1,41 +1,43 @@
 
-var express = require('express')
-	var bodyParser = require('body-parser')
-	var request = require('request');
-var jsonQuery = require('json-query')
-	var dir = require('node-dir');
+var express = require('express');
+var bodyParser = require('body-parser');
+var request = require('request');
+var jsonQuery = require('json-query');
+var dir = require('node-dir');
 const path = require('path');
 const fs = require('fs');
 const sharp = require('sharp');
 //var dropdowns = require('./data/Dropdowns.json')
-var droplists = require('./data/DropLists.json')
-	var droplistsmenu2 = require('./data/DropListsMenu2.json')
-	var locations = require('./data/Locations.json')
-	var classes = require('./data/Classes.json')
-	var lives = require('./data/Lives.json')
-	var infos = require('./data/Infos.json')
-	var urls = require('./data/Urls.json')
-	var ss = require('./data/SlideShow.json')
-	var success = require('./data/success.json')
-	var fail = require('./data/fail.json')
-	var flyput = require('./data/flyPutDataGen.json')
-	var config = require('./config.js');
+var droplists = require('./data/DropLists.json');
+var droplistsmenu2 = require('./data/DropListsMenu2.json');
+var droplistsmenu3 = require('./data/DropListsMenu3.json');
+var locations = require('./data/Locations.json');
+var classes = require('./data/Classes.json');
+var lives = require('./data/Lives.json');
+var infos = require('./data/Infos.json');
+var urls = require('./data/Urls.json');
+var ss = require('./data/SlideShow.json');
+var success = require('./data/success.json');
+var fail = require('./data/fail.json');
+var flyput = require('./data/flyPutDataGen.json');
+var flyput3 = require('./data/flyPutDataGen3.json');
+var config = require('./config.js');
 
 var app = express();
 
 var wallUrl = "http://" + config.serverIp + ":" + config.port + "/static/wall/";
 var flyputUrl = "http://" + config.serverIp + ":" + config.port + "/static/flyput/";
-var VRUrl = "http://" + config.serverIp + ":" + config.port + "/static/VR/"
+var VRUrl = "http://" + config.serverIp + ":" + config.port + "/static/VR/";
 
-	app.use(bodyParser.urlencoded({
-			extended: true
-		}));
+app.use(bodyParser.urlencoded({
+		extended: true
+	}));
 app.use(bodyParser.json());
 app.use('/static', express.static(config.staticPath));
 
 var listener = app.listen(config.port, function () {
 		console.log("app is running on port " + config.port);
-	})
+	});
 
 function sendJson(Data) {
 	var clientServerOptions = {
@@ -158,25 +160,31 @@ app.get('/fly', function (req, res, next) {
 	console.log("Wf query : " + id0 + "," + id1 + "," + id2 + "," + id3 + ";");
 
 	var usedp = '';
-	if (id0 == 0 || id0 == 2) {
+	if (id0 == 0) {
 		usedp = droplists;
-	} else {
+	} else if (id0 == 1) {
 		usedp = droplistsmenu2;
+	} else {
+		usedp = droplistsmenu3;
 	}
 
-	var fil0 = usedp.lists[id1].list0;
-	var fil1 = usedp.lists[id1].childeren0[id2].list1;
-	var fil2 = usedp.lists[id1].childeren0[id2].childeren1[id3].list2;
-
-	console.log("Wf query : " + fil0 + "," + fil1 + "," + fil2 + ";");
-
-	var result = jsonQuery('[* list0=' + fil0 + ' && list1=' + fil1 + ' && list2=' + fil2 + ']', {
-			data: flyput
-		}).value;
-	//console.log(result);
-	res.json(makeFlyput(result));
-
-	//res.json(locations);  testing file
+	if (usedp !== 2) {
+		var fil0 = usedp.lists[id1].list0;
+		var fil1 = usedp.lists[id1].childeren0[id2].list1;
+		var fil2 = usedp.lists[id1].childeren0[id2].childeren1[id3].list2;
+		console.log("Wf query : " + fil0 + "," + fil1 + "," + fil2 + ";");
+		var result = jsonQuery('[* list0=' + fil0 + ' && list1=' + fil1 + ' && list2=' + fil2 + ']', {
+				data: flyput
+			}).value;
+		res.json(makeFlyput(result));
+	} else {
+		var fil0 = usedp.lists[id1].list0;
+		console.log("Wf query : " + fil0 + "," + fil1 + "," + fil2 + ";");
+		var result = jsonQuery('[* list0=' + fil0 + ']', {
+				data: flyput
+			}).value;
+		res.json(makeFlyput(result));
+	}
 })
 
 app.get('/locs', function (req, res, next) {
@@ -187,24 +195,31 @@ app.get('/locs', function (req, res, next) {
 	id2 = req.query.id2;
 	id3 = req.query.id3;
 	console.log("Wf query : " + req.query.id0 + "," + req.query.id1 + "," + req.query.id2 + "," + req.query.id3 + ";");
+
 	var usedp = '';
-	if (id0 == 0 || id0 == 2) {
+	if (id0 == 0) {
 		usedp = droplists;
-	} else {
+	} else if (id0 == 1) {
 		usedp = droplistsmenu2;
+	} else {
+		usedp = droplistsmenu3;
 	}
-
-	var fil0 = usedp.lists[id1].list0;
-	var fil1 = usedp.lists[id1].childeren0[id2].list1;
-	var fil2 = usedp.lists[id1].childeren0[id2].childeren1[id3].list2;
-
-	console.log("Wf query : " + fil0 + "," + fil1 + "," + fil2 + ";");
-
-	var result = jsonQuery('[* list0=' + fil0 + ' && list1=' + fil1 + ' && list2=' + fil2 + ']', {
-			data: flyput
-		}).value;
-	//console.log(result);
-
+	var result = '';
+	if (usedp !== 2) {
+		var fil0 = usedp.lists[id1].list0;
+		var fil1 = usedp.lists[id1].childeren0[id2].list1;
+		var fil2 = usedp.lists[id1].childeren0[id2].childeren1[id3].list2;
+		console.log("Wf query : " + fil0 + "," + fil1 + "," + fil2 + ";");
+		result = jsonQuery('[* list0=' + fil0 + ' && list1=' + fil1 + ' && list2=' + fil2 + ']', {
+				data: flyput
+			}).value;
+	} else {
+		var fil0 = usedp.lists[id1].list0;
+		console.log("Wf query : " + fil0 + "," + fil1 + "," + fil2 + ";");
+		result = jsonQuery('[* list0=' + fil0 + ']', {
+				data: flyput
+			}).value;
+	}
 
 	var s = {
 		access_token: "asd12rl;3k2eo1kejf",
