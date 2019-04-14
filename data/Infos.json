@@ -5,7 +5,7 @@
 					"Main": "典禮活動",
 					"medias": [{
 							"id": 75936,
-							"name": "古力 104年度古蹟歷史建築管理維護評鑑優良案例影像輯 精彩影像",
+							"title": "古力 104年度古蹟歷史建築管理維護評鑑優良案例影像輯 精彩影像",
 							"url": "75936.mp4",
 							"rawurl": "//imedia.culture.tw/s3/uq/75936-480.mp4",
 							"thumbnail": "75936.png",
@@ -13,7 +13,7 @@
 							"rawimageurl": "https://imedia-assets.s3.hicloud.net.tw/boch/media/75936/image/image_fb9c53d64f3d4780ad4412c7c9cad1d8.png"
 						}, {
 							"id": 75576,
-							"name": "102年度重要傳統藝術暨文化資產保存技術 保存者介紹 及授證過程典禮 紀念光碟",
+							"title": "102年度重要傳統藝術暨文化資產保存技術 保存者介紹 及授證過程典禮 紀念光碟",
 							"url": "75576.mp4",
 							"rawurl": "//imedia.culture.tw/s3/uq/75576-480.mp4",
 							"thumbnail": "75576.png",
@@ -21,7 +21,7 @@
 							"rawimageurl": "https://imedia-assets.s3.hicloud.net.tw/boch/media/75576/image/_53b3f1c6d0604042b9f409ac0eb7ff97.jpg"
 						}, {
 							"id": 75598,
-							"name": "第一屆授證典禮－廖瓊枝",
+							"title": "第一屆授證典禮－廖瓊枝",
 							"url": "75598.mp4",
 							"rawurl": "//imedia.culture.tw/s3/uq/75598-1080.mp4",
 							"thumbnail": "75598.png",
@@ -29,7 +29,7 @@
 							"rawimageurl": "https://imedia-assets.s3.hicloud.net.tw/boch/media/75598/image/image_19c894dd73ba4fbb9353ff65313e1327.png"
 						}, {
 							"id": 75573,
-							"name": "98年重要傳統藝術暨文化資產保存技術 授證典禮 紀念光碟",
+							"title": "98年重要傳統藝術暨文化資產保存技術 授證典禮 紀念光碟",
 							"url": "75573.mp4",
 							"rawurl": "//imedia.culture.tw/s3/uq/75573-480.mp4",
 							"thumbnail": "75573.png",
@@ -37,7 +37,7 @@
 							"rawimageurl": "https://imedia-assets.s3.hicloud.net.tw/boch/media/75573/image/image_ba13c852b6c04bd2b2864600dd712c57.png"
 						}, {
 							"id": 75600,
-							"name": "第一屆授證典禮－楊秀卿",
+							"title": "第一屆授證典禮－楊秀卿",
 							"url": "75600.mp4",
 							"rawurl": "//imedia.culture.tw/s3/uq/75600-1080.mp4",
 							"thumbnail": "75600.png",
@@ -49,7 +49,7 @@
 					"Main": "講演",
 					"medias": [{
 							"id": 75579,
-							"name": "張宇彤 寺廟屋頂大觀：傳統建築屋頂藝匠",
+							"title": "張宇彤 寺廟屋頂大觀：傳統建築屋頂藝匠",
 							"url": "75579.mp4",
 							"rawurl": "//imedia.culture.tw/s3/uq/75579-1080.mp4",
 							"thumbnail": "75579.png",
@@ -57,7 +57,7 @@
 							"rawimageurl": "https://imedia-assets.s3.hicloud.net.tw/boch/media/75579/image/image_357d9ab988df481590b858f6f4a1a270.png"
 						}, {
 							"id": 75583,
-							"name": "林彥良 不看僧面看佛面：傳統寺廟美術工藝面面觀",
+							"title": "林彥良 不看僧面看佛面：傳統寺廟美術工藝面面觀",
 							"url": "75583.mp4",
 							"rawurl": "//imedia.culture.tw/s3/uq/75583-1080.mp4",
 							"thumbnail": "75583.png",
@@ -65,7 +65,7 @@
 							"rawimageurl": "https://imedia-assets.s3.hicloud.net.tw/boch/media/75583/image/image_7e18a6a8554f473c95d96ea03a0c0c1f.png"
 						}, {
 							"id": 75584,
-							"name": "林洸沂 屋頂上的交趾陶手：交趾陶的傳統與現代",
+							"title": "林洸沂 屋頂上的交趾陶手：交趾陶的傳統與現代",
 							"url": "75584.mp4",
 							"rawurl": "//imedia.culture.tw/s3/uq/75584-1080.mp4",
 							"thumbnail": "75584.png",
@@ -73,7 +73,7 @@
 							"rawimageurl": "https://imedia-assets.s3.hicloud.net.tw/boch/media/75584/image/image_79e515a86a8c48c8867073fd9ec51af4.png"
 						}, {
 							"id": 75659,
-							"name": "0715下午無形文化資產講堂-泰雅傳統織布-手作體驗",
+							"title": "0715下午無形文化資產講堂-泰雅傳統織布-手作體驗",
 							"url": "75659.mp4",
 							"rawurl": "//imedia.culture.tw/s3/uq/75659-1080.mp4",
 							"thumbnail": "75659.png",
@@ -81,7 +81,7 @@
 							"rawimageurl": "https://imedia-assets.s3.hicloud.net.tw/boch/media/75659/image/image_535b92f65f23482283223f4cfe132dfc.png"
 						}, {
 							"id": 75666,
-							"name": "1118上午無形文化資產講堂-王爺信仰",
+							"title": "1118上午無形文化資產講堂-王爺信仰",
 							"url": "75666.mp4",
 							"rawurl": "//imedia.culture.tw/s3/uq/75666-1080.mp4",
 							"thumbnail": "75666.png",
@@ -93,7 +93,7 @@
 					"Main": "紀錄影片",
 					"medias": [{
 							"id": 75895,
-							"name": "千年慈悲 中元普度",
+							"title": "千年慈悲 中元普度",
 							"url": "75895.mp4",
 							"rawurl": "//imedia.culture.tw/s3/uq/75895-480.mp4",
 							"thumbnail": "75895.png",
@@ -101,7 +101,7 @@
 							"rawimageurl": "https://imedia-assets.s3.hicloud.net.tw/boch/media/75895/image/image_1cb8ee4e40074a13a2f24568411e05be.png"
 						}, {
 							"id": 75893,
-							"name": "莊嚴與快樂的聚會",
+							"title": "莊嚴與快樂的聚會",
 							"url": "75893.mp4",
 							"rawurl": "//imedia.culture.tw/s3/uq/75893-480.mp4",
 							"thumbnail": "75893.png",
@@ -109,7 +109,7 @@
 							"rawimageurl": "https://imedia-assets.s3.hicloud.net.tw/boch/media/75893/image/image_d8f462e85617449ca4f33fb069787fc4.png"
 						}, {
 							"id": 75704,
-							"name": "王保原剪黏尪仔傳統修復技術傳習及施作紀錄",
+							"title": "王保原剪黏尪仔傳統修復技術傳習及施作紀錄",
 							"url": "75704.mp4",
 							"rawurl": "//imedia.culture.tw/s3/uq/75704-1080.mp4",
 							"thumbnail": "75704.png",
@@ -117,7 +117,7 @@
 							"rawimageurl": "https://imedia-assets.s3.hicloud.net.tw/boch/media/75704/image/image_370fb269e4224a60a2745abe94f2e0b4.png"
 						}, {
 							"id": 75715,
-							"name": "科技探秘－文化資產保存與環境變遷",
+							"title": "科技探秘－文化資產保存與環境變遷",
 							"url": "75715.mp4",
 							"rawurl": "//imedia.culture.tw/s3/uq/75715-1080.mp4",
 							"thumbnail": "75715.png",
@@ -125,7 +125,7 @@
 							"rawimageurl": "https://imedia-assets.s3.hicloud.net.tw/boch/media/75715/image/_d40e10af559545bd925d962f2d0a0da3.jpg"
 						}, {
 							"id": 75718,
-							"name": "彩繪門神回娘家-北港朝天宮門神保存修復",
+							"title": "彩繪門神回娘家-北港朝天宮門神保存修復",
 							"url": "75718.mp4",
 							"rawurl": "//imedia.culture.tw/s3/uq/75718-480.mp4",
 							"thumbnail": "75718.png",
@@ -137,7 +137,7 @@
 					"Main": "傳習紀錄",
 					"medias": [{
 							"id": 75601,
-							"name": "陳錫煌藝師訪談",
+							"title": "陳錫煌藝師訪談",
 							"url": "75601.mp4",
 							"rawurl": "//imedia.culture.tw/s3/uq/75601-1080.mp4",
 							"thumbnail": "75601.png",
@@ -145,7 +145,7 @@
 							"rawimageurl": "https://imedia-assets.s3.hicloud.net.tw/boch/media/75601/image/image_41fb01cbc0da45858b9787c2700e9981.png"
 						}, {
 							"id": 75670,
-							"name": "重要文化資產保存技術-古典布袋戲偶衣飾盔帽道具製作技術-陳錫煌保存者簡介",
+							"title": "重要文化資產保存技術-古典布袋戲偶衣飾盔帽道具製作技術-陳錫煌保存者簡介",
 							"url": "75670.mp4",
 							"rawurl": "//imedia.culture.tw/s3/uq/75670-1080.mp4",
 							"thumbnail": "75670.png",
@@ -153,7 +153,7 @@
 							"rawimageurl": "https://imedia-assets.s3.hicloud.net.tw/boch/media/75670/image/image_7ea08e20f5384756a806ef15bd4214b6.png"
 						}, {
 							"id": 75700,
-							"name": "頂真巧藝-林洸沂交趾陶修復技術紀錄(3分鐘版)",
+							"title": "頂真巧藝-林洸沂交趾陶修復技術紀錄(3分鐘版)",
 							"url": "75700.mp4",
 							"rawurl": "//imedia.culture.tw/s3/uq/75700-1080.mp4",
 							"thumbnail": "75700.png",
@@ -161,7 +161,7 @@
 							"rawimageurl": "https://imedia-assets.s3.hicloud.net.tw/boch/media/75700/image/image_ca2baef86d2c4312b9bd11e2210abda7.png"
 						}, {
 							"id": 75631,
-							"name": "102授證－傳統建築彩繪-陳壽彝",
+							"title": "102授證－傳統建築彩繪-陳壽彝",
 							"url": "75631.mp4",
 							"rawurl": "//imedia.culture.tw/s3/uq/75631-1080.mp4",
 							"thumbnail": "75631.png",
@@ -169,7 +169,7 @@
 							"rawimageurl": "https://imedia-assets.s3.hicloud.net.tw/boch/media/75631/image/image_eef72dfc605a499e815d3c14c70506d2.png"
 						}, {
 							"id": 75626,
-							"name": "施鎮洋藝師訪談",
+							"title": "施鎮洋藝師訪談",
 							"url": "75626.mp4",
 							"rawurl": "//imedia.culture.tw/s3/uq/75626-1080.mp4",
 							"thumbnail": "75626.png",
