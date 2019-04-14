@@ -217,6 +217,8 @@ app.get('/locs', function (req, res, next) {
 			}).value;
 	} else {
 		var fil0 = usedp.lists[id1].list0;
+		console.log('flyput3:' + flyput3)
+		console.log('fil0:' + fil0)
 		console.log("Wf query : " + fil0 + "," + fil1 + "," + fil2 + ";");
 		result = jsonQuery('[* list0=' + fil0 + ']', {
 				data: flyput3
