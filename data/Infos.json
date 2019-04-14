@@ -1,400 +1,184 @@
-{"infos":[
-	{
-		"Title":"古典布袋戲偶衣飾盔帽道具製作技術",
-		"Datas":[
-			{
-				"Main":"陳錫煌軟盔製作片頭",
-				"medias":[
-					{
-						"id":  75671,
-						"title":  "陳錫煌軟盔製作片頭",
-						"url":  "75671.mp4",
-						"rawurl":  "//imedia.culture.tw/s3/uq/75671-480.mp4",
-						"thumbnail":  "75671.png",
-						"desc":  "",
-						"rawimageurl":  "https://imedia-assets.s3.hicloud.net.tw/boch/media/75671/image/image_9b3c499ebda54f01be84bfbf688ff3c3.png"
-					}
-				]
-			},
-			{
-				"Main":"陳錫煌軟盔製作",
-				"medias":[{
-					"id":  75672,
-					"title":  "陳錫煌軟盔製作-公巾",
-					"url":  "75672.mp4",
-					"rawurl":  "//imedia.culture.tw/s3/uq/75672-480.mp4",
-					"thumbnail":  "75672.png",
-					"desc":  "",
-					"rawimageurl":  "https://imedia-assets.s3.hicloud.net.tw/boch/media/75672/image/image_e4fa8b6e8d7c4066901d3cd1c2581784.png"
-				},{
-					"id":  75673,
-					"title":  "陳錫煌軟盔製作-七星巾",
-					"url":  "75673.mp4",
-					"rawurl":  "//imedia.culture.tw/s3/uq/75673-480.mp4",
-					"thumbnail":  "75673.png",
-					"desc":  "",
-					"rawimageurl":  "https://imedia-assets.s3.hicloud.net.tw/boch/media/75673/image/image_a6969baac36a40be9278a9066933d2df.png"
-				},{
-					"id":  75674,
-					"title":  "陳錫煌軟盔製作-文生巾",
-					"url":  "75674.mp4",
-					"rawurl":  "//imedia.culture.tw/s3/uq/75674-480.mp4",
-					"thumbnail":  "75674.png",
-					"desc":  "",
-					"rawimageurl":  "https://imedia-assets.s3.hicloud.net.tw/boch/media/75674/image/image_be2747b986104666a5bd41778ca81c22.png"
-				},{
-					"id":  75675,
-					"title":  "陳錫煌軟盔製作-改良式武生巾",
-					"url":  "75675.mp4",
-					"rawurl":  "//imedia.culture.tw/s3/uq/75675-480.mp4",
-					"thumbnail":  "75675.png",
-					"desc":  "",
-					"rawimageurl":  "https://imedia-assets.s3.hicloud.net.tw/boch/media/75675/image/image_44f382fcc54c46f2bea40a872ae48386.png"
-				},{
-					"id":  75676,
-					"title":  "陳錫煌軟盔製作-武生巾",
-					"url":  "75676.mp4",
-					"rawurl":  "//imedia.culture.tw/s3/uq/75676-480.mp4",
-					"thumbnail":  "75676.png",
-					"desc":  "",
-					"rawimageurl":  "https://imedia-assets.s3.hicloud.net.tw/boch/media/75676/image/image_d2fb65dff424433e81cb33d6848fc17a.png"
-				},{
-					"id":  75677,
-					"title":  "陳錫煌軟盔製作-暢舍巾",
-					"url":  "75677.mp4",
-					"rawurl":  "//imedia.culture.tw/s3/uq/75677-480.mp4",
-					"thumbnail":  "75677.png",
-					"desc":  "",
-					"rawimageurl":  "https://imedia-assets.s3.hicloud.net.tw/boch/media/75677/image/image_c93f54074cd345b19d15b75fea22a2dd.png"
-				},{
-					"id":  75678,
-					"title":  "陳錫煌軟盔製作-斜邊巾",
-					"url":  "75678.mp4",
-					"rawurl":  "//imedia.culture.tw/s3/uq/75678-480.mp4",
-					"thumbnail":  "75678.png",
-					"desc":  null,
-					"rawimageurl":  "https://imedia-assets.s3.hicloud.net.tw/boch/media/75678/image/image_cebe2b7c331a466183012d7288c8638d.png"
-				},{
-					"id":  75679,
-					"title":  "陳錫煌軟盔製作-六角軟",
-					"url":  "75679.mp4",
-					"rawurl":  "//imedia.culture.tw/s3/uq/75679-480.mp4",
-					"thumbnail":  "75679.png",
-					"desc":  "",
-					"rawimageurl":  "https://imedia-assets.s3.hicloud.net.tw/boch/media/75679/image/image_96991683b91b473fa1197aeafea48b92.png"
-				},{
-					"id":  75680,
-					"title":  "陳錫煌軟盔製作-尾蝶巾",
-					"url":  "75680.mp4",
-					"rawurl":  "//imedia.culture.tw/s3/uq/75680-480.mp4",
-					"thumbnail":  "75680.png",
-					"desc":  "",
-					"rawimageurl":  "https://imedia-assets.s3.hicloud.net.tw/boch/media/75680/image/image_87d1a15f358a4d8d83d6068232b013be.png"
-				},{
-					"id":  75681,
-					"title":  "陳錫煌軟盔製作-軟相巾",
-					"url":  "75681.mp4",
-					"rawurl":  "//imedia.culture.tw/s3/uq/75681-480.mp4",
-					"thumbnail":  "75681.png",
-					"desc":  "",
-					"rawimageurl":  "https://imedia-assets.s3.hicloud.net.tw/boch/media/75681/image/image_2fd0cb0534254a30a42624890004541b.png"
-				},{
-					"id":  75682,
-					"title":  "陳錫煌軟盔製作-金蔥笠",
-					"url":  "75682.mp4",
-					"rawurl":  "//imedia.culture.tw/s3/uq/75682-480.mp4",
-					"thumbnail":  "75682.png",
-					"desc":  "",
-					"rawimageurl":  "https://imedia-assets.s3.hicloud.net.tw/boch/media/75682/image/image_8a1122e8ccde4e8ab2464ed4748a6a0a.png"
-				},{
-					"id":  75683,
-					"title":  "陳錫煌軟盔製作-串仔巾",
-					"url":  "75683.mp4",
-					"rawurl":  "//imedia.culture.tw/s3/uq/75683-480.mp4",
-					"thumbnail":  "75683.png",
-					"desc":  "",
-					"rawimageurl":  "https://imedia-assets.s3.hicloud.net.tw/boch/media/75683/image/image_31f64f22d5bf43da813c85fd008a6f69.png"
-				},{
-					"id":  75684,
-					"title":  "陳錫煌軟盔製作-斧頭巾",
-					"url":  "75684.mp4",
-					"rawurl":  "//imedia.culture.tw/s3/uq/75684-480.mp4",
-					"thumbnail":  "75684.png",
-					"desc":  "",
-					"rawimageurl":  "https://imedia-assets.s3.hicloud.net.tw/boch/media/75684/image/image_da14ee151d7e4fcaa8421f44ba40418e.png"
-				},{
-					"id":  75685,
-					"title":  "陳錫煌軟盔製作-合掌",
-					"url":  "75685.mp4",
-					"rawurl":  "//imedia.culture.tw/s3/uq/75685-480.mp4",
-					"thumbnail":  "75685.png",
-					"desc":  "",
-					"rawimageurl":  "https://imedia-assets.s3.hicloud.net.tw/boch/media/75685/image/image_97f1d781813445d4a9e89962431ad07b.png"
-				},{
-					"id":  75686,
-					"title":  "陳錫煌軟盔製作-南戰",
-					"url":  "75686.mp4",
-					"rawurl":  "//imedia.culture.tw/s3/uq/75686-480.mp4",
-					"thumbnail":  "75686.png",
-					"desc":  "",
-					"rawimageurl":  "https://imedia-assets.s3.hicloud.net.tw/boch/media/75686/image/image_6d2078db64f6456b9cf23e8521faaa4d.png"
+{
+	"infos": [{
+			"Title": "文資記憶典藏",
+			"Datas": [{
+					"Main": "典禮活動",
+					"medias": [{
+							"id": 75936,
+							"name": "古力 104年度古蹟歷史建築管理維護評鑑優良案例影像輯 精彩影像",
+							"url": "75936.mp4",
+							"rawurl": "//imedia.culture.tw/s3/uq/75936-480.mp4",
+							"thumbnail": "75936.png",
+							"desc": "獲獎個案精彩影像剪輯",
+							"rawimageurl": "https://imedia-assets.s3.hicloud.net.tw/boch/media/75936/image/image_fb9c53d64f3d4780ad4412c7c9cad1d8.png"
+						}, {
+							"id": 75576,
+							"name": "102年度重要傳統藝術暨文化資產保存技術 保存者介紹 及授證過程典禮 紀念光碟",
+							"url": "75576.mp4",
+							"rawurl": "//imedia.culture.tw/s3/uq/75576-480.mp4",
+							"thumbnail": "75576.png",
+							"desc": "這塊土地上，先民的生活經驗累積而成的歷史智慧，創造了臺灣豐富、多元的文化樣貌，更成就了許多全民珍貴的文化資產。為積極推動文化資產的保存、維護與傳習，文化部制訂施行「文化資產保存法」、經嚴格審議作業，透過國家指定，表彰國寶大師們在各個傳統藝術領域上的成就與貢獻。文化部自2009年舉辦第一屆重要傳統藝術授證典禮，至今已邁入第五年，藉此向藝師們對其於傳統藝術上的付出與努力予以高度肯定，並致上崇高敬意，更賦予傳承的重要使命，並以四年為一期為國家孕育新一代的傳統藝術人才，讓瑰麗的臺灣文化永續留存且發揚光大。",
+							"rawimageurl": "https://imedia-assets.s3.hicloud.net.tw/boch/media/75576/image/_53b3f1c6d0604042b9f409ac0eb7ff97.jpg"
+						}, {
+							"id": 75598,
+							"name": "第一屆授證典禮－廖瓊枝",
+							"url": "75598.mp4",
+							"rawurl": "//imedia.culture.tw/s3/uq/75598-1080.mp4",
+							"thumbnail": "75598.png",
+							"desc": "重要傳統表演藝術-歌仔戲 保存者廖瓊枝 個人介紹",
+							"rawimageurl": "https://imedia-assets.s3.hicloud.net.tw/boch/media/75598/image/image_19c894dd73ba4fbb9353ff65313e1327.png"
+						}, {
+							"id": 75573,
+							"name": "98年重要傳統藝術暨文化資產保存技術 授證典禮 紀念光碟",
+							"url": "75573.mp4",
+							"rawurl": "//imedia.culture.tw/s3/uq/75573-480.mp4",
+							"thumbnail": "75573.png",
+							"desc": "「第一屆重要傳統藝術保存者暨保存團體」授證典禮:保存者 廖瓊枝、楊秀卿、陳錫煌，以及北管音樂類的梨春園北管樂團及北管戲曲類的漢陽北管劇團。傳統藝術反映古昔常民生活形態和娛樂類型，在藝術上具有重要價值。經中央指定之傳統藝術重要保存者及保存團體，其傳統藝能及技藝的表現深獲肯定，並在全國具有領先地位。為肯定傳統藝術之保存者及保存團體長年投入無形文化資產之發揚與傳承，特出版此書，以彰顯對國家層級保存者及保存團體之尊崇，並提升各界對於文化資產的保存觀念，共同促進臺灣文化資產的保存與維護。",
+							"rawimageurl": "https://imedia-assets.s3.hicloud.net.tw/boch/media/75573/image/image_ba13c852b6c04bd2b2864600dd712c57.png"
+						}, {
+							"id": 75600,
+							"name": "第一屆授證典禮－楊秀卿",
+							"url": "75600.mp4",
+							"rawurl": "//imedia.culture.tw/s3/uq/75600-1080.mp4",
+							"thumbnail": "75600.png",
+							"desc": "重要傳統表演藝術-說唱 保存者:楊秀卿 個人介紹",
+							"rawimageurl": "https://imedia-assets.s3.hicloud.net.tw/boch/media/75600/image/image_4edfca004b5f49b2a56dfefd1dce3aec.png"
+						}
+					]
+				}, {
+					"Main": "講演",
+					"medias": [{
+							"id": 75579,
+							"name": "張宇彤 寺廟屋頂大觀：傳統建築屋頂藝匠",
+							"url": "75579.mp4",
+							"rawurl": "//imedia.culture.tw/s3/uq/75579-1080.mp4",
+							"thumbnail": "75579.png",
+							"desc": "無形文化資產的保存，需要政府、民間、社區及全民共同參與；因此為了推廣無形文化資產之保護觀念與交流學習，文化部文化資產局規劃辦理「無形文化資產講堂」，邀請相關專業領域專家學者、文化資產保存者/團體、保存技術保存者、民間藝人等，針對臺灣無形文化資產保護管理、原住民文化資產保護及文化資產保存技術等議題，以講座、示範演出、實作與觀賞影片等方式，進行發表、對談、經驗分享，以共同推動無形文化資產的保護傳承工作。期盼透過專家、學者或保存者的經驗分享，讓大眾認識並珍惜台灣在地文化寶藏。",
+							"rawimageurl": "https://imedia-assets.s3.hicloud.net.tw/boch/media/75579/image/image_357d9ab988df481590b858f6f4a1a270.png"
+						}, {
+							"id": 75583,
+							"name": "林彥良 不看僧面看佛面：傳統寺廟美術工藝面面觀",
+							"url": "75583.mp4",
+							"rawurl": "//imedia.culture.tw/s3/uq/75583-1080.mp4",
+							"thumbnail": "75583.png",
+							"desc": "無形文化資產的保存，需要政府、民間、社區及全民共同參與；因此為了推廣無形文化資產之保護觀念與交流學習，文化部文化資產局規劃辦理「無形文化資產講堂」，邀請相關專業領域專家學者、文化資產保存者/團體、保存技術保存者、民間藝人等，針對臺灣無形文化資產保護管理、原住民文化資產保護及文化資產保存技術等議題，以講座、示範演出、實作與觀賞影片等方式，進行發表、對談、經驗分享，以共同推動無形文化資產的保護傳承工作。期盼透過專家、學者或保存者的經驗分享，讓大眾認識並珍惜台灣在地文化寶藏。",
+							"rawimageurl": "https://imedia-assets.s3.hicloud.net.tw/boch/media/75583/image/image_7e18a6a8554f473c95d96ea03a0c0c1f.png"
+						}, {
+							"id": 75584,
+							"name": "林洸沂 屋頂上的交趾陶手：交趾陶的傳統與現代",
+							"url": "75584.mp4",
+							"rawurl": "//imedia.culture.tw/s3/uq/75584-1080.mp4",
+							"thumbnail": "75584.png",
+							"desc": "無形文化資產的保存，需要政府、民間、社區及全民共同參與；因此為了推廣無形文化資產之保護觀念與交流學習，文化部文化資產局規劃辦理「無形文化資產講堂」，邀請相關專業領域專家學者、文化資產保存者/團體、保存技術保存者、民間藝人等，針對臺灣無形文化資產保護管理、原住民文化資產保護及文化資產保存技術等議題，以講座、示範演出、實作與觀賞影片等方式，進行發表、對談、經驗分享，以共同推動無形文化資產的保護傳承工作。期盼透過專家、學者或保存者的經驗分享，讓大眾認識並珍惜台灣在地文化寶藏。",
+							"rawimageurl": "https://imedia-assets.s3.hicloud.net.tw/boch/media/75584/image/image_79e515a86a8c48c8867073fd9ec51af4.png"
+						}, {
+							"id": 75659,
+							"name": "0715下午無形文化資產講堂-泰雅傳統織布-手作體驗",
+							"url": "75659.mp4",
+							"rawurl": "//imedia.culture.tw/s3/uq/75659-1080.mp4",
+							"thumbnail": "75659.png",
+							"desc": "本局辦理2017年無形文化資產講堂",
+							"rawimageurl": "https://imedia-assets.s3.hicloud.net.tw/boch/media/75659/image/image_535b92f65f23482283223f4cfe132dfc.png"
+						}, {
+							"id": 75666,
+							"name": "1118上午無形文化資產講堂-王爺信仰",
+							"url": "75666.mp4",
+							"rawurl": "//imedia.culture.tw/s3/uq/75666-1080.mp4",
+							"thumbnail": "75666.png",
+							"desc": "本局辦理2017年無形文化資產講堂",
+							"rawimageurl": "https://imedia-assets.s3.hicloud.net.tw/boch/media/75666/image/image_dc10043c560d411c88a543c992cd0f1e.png"
+						}
+					]
+				}, {
+					"Main": "紀錄影片",
+					"medias": [{
+							"id": 75895,
+							"name": "千年慈悲 中元普度",
+							"url": "75895.mp4",
+							"rawurl": "//imedia.culture.tw/s3/uq/75895-480.mp4",
+							"thumbnail": "75895.png",
+							"desc": "介紹台灣非物質文化潛力點-中元普度歷史脈絡及發展現況；並針對中元祭的地方性、藝術性、多元化等介紹其重要性，以提醒人民的虔敬民俗活動，，處處展現對鬼有愛對人間亦存關懷的愛。",
+							"rawimageurl": "https://imedia-assets.s3.hicloud.net.tw/boch/media/75895/image/image_1cb8ee4e40074a13a2f24568411e05be.png"
+						}, {
+							"id": 75893,
+							"name": "莊嚴與快樂的聚會",
+							"url": "75893.mp4",
+							"rawurl": "//imedia.culture.tw/s3/uq/75893-480.mp4",
+							"thumbnail": "75893.png",
+							"desc": "任何民族在四季歲時的祭儀中間，都會有一個開始與結束，而豐年祭便扮演著阿美族人一年的始末，就相當於漢人社會的過年，對阿美族是最為神聖重要的祭典。在這祭祀當中，最主要的結構就是人跟神之間的祭祀互動，神包括了天神與祖先，祖先便包含了先賢、先王；而人便是泛指信徒，信徒則由神職人員來代表祭祀，這當中許多儀式是一種從平凡世俗進到神聖階段的過程，並且透過阿美族特有的歌舞形式來酬神。整體來說，阿美族的豐年祭表現出了傳統族群之團結與文化之美，是台灣相當珍貴重要的文化資產。",
+							"rawimageurl": "https://imedia-assets.s3.hicloud.net.tw/boch/media/75893/image/image_d8f462e85617449ca4f33fb069787fc4.png"
+						}, {
+							"id": 75704,
+							"name": "王保原剪黏尪仔傳統修復技術傳習及施作紀錄",
+							"url": "75704.mp4",
+							"rawurl": "//imedia.culture.tw/s3/uq/75704-1080.mp4",
+							"thumbnail": "75704.png",
+							"desc": "",
+							"rawimageurl": "https://imedia-assets.s3.hicloud.net.tw/boch/media/75704/image/image_370fb269e4224a60a2745abe94f2e0b4.png"
+						}, {
+							"id": 75715,
+							"name": "科技探秘－文化資產保存與環境變遷",
+							"url": "75715.mp4",
+							"rawurl": "//imedia.culture.tw/s3/uq/75715-1080.mp4",
+							"thumbnail": "75715.png",
+							"desc": null,
+							"rawimageurl": "https://imedia-assets.s3.hicloud.net.tw/boch/media/75715/image/_d40e10af559545bd925d962f2d0a0da3.jpg"
+						}, {
+							"id": 75718,
+							"name": "彩繪門神回娘家-北港朝天宮門神保存修復",
+							"url": "75718.mp4",
+							"rawurl": "//imedia.culture.tw/s3/uq/75718-480.mp4",
+							"thumbnail": "75718.png",
+							"desc": null,
+							"rawimageurl": "https://imedia-assets.s3.hicloud.net.tw/boch/media/75718/image/image_dde9a1aacce7474b953f48830bf4e6c8.png"
+						}
+					]
+				}, {
+					"Main": "傳習紀錄",
+					"medias": [{
+							"id": 75601,
+							"name": "陳錫煌藝師訪談",
+							"url": "75601.mp4",
+							"rawurl": "//imedia.culture.tw/s3/uq/75601-1080.mp4",
+							"thumbnail": "75601.png",
+							"desc": "",
+							"rawimageurl": "https://imedia-assets.s3.hicloud.net.tw/boch/media/75601/image/image_41fb01cbc0da45858b9787c2700e9981.png"
+						}, {
+							"id": 75670,
+							"name": "重要文化資產保存技術-古典布袋戲偶衣飾盔帽道具製作技術-陳錫煌保存者簡介",
+							"url": "75670.mp4",
+							"rawurl": "//imedia.culture.tw/s3/uq/75670-1080.mp4",
+							"thumbnail": "75670.png",
+							"desc": "",
+							"rawimageurl": "https://imedia-assets.s3.hicloud.net.tw/boch/media/75670/image/image_7ea08e20f5384756a806ef15bd4214b6.png"
+						}, {
+							"id": 75700,
+							"name": "頂真巧藝-林洸沂交趾陶修復技術紀錄(3分鐘版)",
+							"url": "75700.mp4",
+							"rawurl": "//imedia.culture.tw/s3/uq/75700-1080.mp4",
+							"thumbnail": "75700.png",
+							"desc": "",
+							"rawimageurl": "https://imedia-assets.s3.hicloud.net.tw/boch/media/75700/image/image_ca2baef86d2c4312b9bd11e2210abda7.png"
+						}, {
+							"id": 75631,
+							"name": "102授證－傳統建築彩繪-陳壽彝",
+							"url": "75631.mp4",
+							"rawurl": "//imedia.culture.tw/s3/uq/75631-1080.mp4",
+							"thumbnail": "75631.png",
+							"desc": null,
+							"rawimageurl": "https://imedia-assets.s3.hicloud.net.tw/boch/media/75631/image/image_eef72dfc605a499e815d3c14c70506d2.png"
+						}, {
+							"id": 75626,
+							"name": "施鎮洋藝師訪談",
+							"url": "75626.mp4",
+							"rawurl": "//imedia.culture.tw/s3/uq/75626-1080.mp4",
+							"thumbnail": "75626.png",
+							"desc": null,
+							"rawimageurl": "https://imedia-assets.s3.hicloud.net.tw/boch/media/75626/image/image_15d7f662fc0c4780b051927eba3cabc8.png"
+						}
+					]
 				}
 			]
-},
-{
-	"Main":"陳錫煌硬盔製作技術",
-	"medias":[{
-		"id":  75687,
-		"title":  "陳錫煌硬盔製作技術-四方匙",
-		"url":  "75687.mp4",
-		"rawurl":  "//imedia.culture.tw/s3/uq/75687-1080.mp4",
-		"thumbnail":  "75687.png",
-		"desc":  null,
-		"rawimageurl":  "https://imedia-assets.s3.hicloud.net.tw/boch/media/75687/image/image_892e0f90b01b4d109f6db4c94946d01e.png"
-	},{
-		"id":  75688,
-		"title":  "陳錫煌硬盔製作技術-刀盔",
-		"url":  "75688.mp4",
-		"rawurl":  "//imedia.culture.tw/s3/uq/75688-1080.mp4",
-		"thumbnail":  "75688.png",
-		"desc":  "",
-		"rawimageurl":  "https://imedia-assets.s3.hicloud.net.tw/boch/media/75688/image/image_2e6e2afee8de4efaa443b3ce7629b715.png"
-	},{
-		"id":  75689,
-		"title":  "陳錫煌硬盔製作技術-王帽",
-		"url":  "75689.mp4",
-		"rawurl":  "//imedia.culture.tw/s3/uq/75689-1080.mp4",
-		"thumbnail":  "75689.png",
-		"desc":  "",
-		"rawimageurl":  "https://imedia-assets.s3.hicloud.net.tw/boch/media/75689/image/image_e44042ca66ef4c5ebd0a030b1a189cbc.png"
-	},{
-		"id":  75690,
-		"title":  "陳錫煌硬盔製作技術-黑貂",
-		"url":  "75690.mp4",
-		"rawurl":  "//imedia.culture.tw/s3/uq/75690-1080.mp4",
-		"thumbnail":  "75690.png",
-		"desc":  "",
-		"rawimageurl":  "https://imedia-assets.s3.hicloud.net.tw/boch/media/75690/image/image_981297f0b74e4959bae9936028e7d437.png"
-	}
-]
-},
-{
-	"Main":"陳錫煌長兵器製作說明",
-	"medias":[{
-		"id":  75697,
-		"title":  "陳錫煌長兵器製作說明",
-		"url":  "75697.mp4",
-		"rawurl":  "//imedia.culture.tw/s3/uq/75697-1080.mp4",
-		"thumbnail":  "75697.png",
-		"desc":  "",
-		"rawimageurl":  "https://imedia-assets.s3.hicloud.net.tw/boch/media/75697/image/image_7a54df6345d14f75935d3d2b2e731928.png"
-	}		
-]
-}
-]
-},{
-	"Title":"頂真巧藝",
-	"Datas":[
-		{
-			"Main":"頂真巧藝",
-			"medias":[{
-				"id":  75700,
-				"title":  "頂真巧藝-林洸沂交趾陶修復技術紀錄(3分鐘版)",
-				"url":  "75700.mp4",
-				"rawurl":  "//imedia.culture.tw/s3/uq/75700-1080.mp4",
-				"thumbnail":  "75700.png",
-				"desc":  "",
-				"rawimageurl":  "https://imedia-assets.s3.hicloud.net.tw/boch/media/75700/image/image_ca2baef86d2c4312b9bd11e2210abda7.png"
-			},{
-				"id":  75701,
-				"title":  "頂真巧藝-林洸沂交趾陶修復技術紀錄(24分鐘版)",
-				"url":  "75701.mp4",
-				"rawurl":  "//imedia.culture.tw/s3/uq/75701-1080.mp4",
-				"thumbnail":  "75701.png",
-				"desc":  "",
-				"rawimageurl":  "https://imedia-assets.s3.hicloud.net.tw/boch/media/75701/image/image_1d9276e0c62d4c2db5f0b74ef637eb43.png"
-			},{
-				"id":  75702,
-				"title":  "頂真巧藝-林洸沂交趾陶修復技術紀錄(50分鐘版)",
-				"url":  "75702.mp4",
-				"rawurl":  "//imedia.culture.tw/s3/uq/75702-1080.mp4",
-				"thumbnail":  "75702.png",
-				"desc":  "",
-				"rawimageurl":  "https://imedia-assets.s3.hicloud.net.tw/boch/media/75702/image/image_fa361be6200a407c9fa45ed7eac7066f.png"
-			}
-		]
-		}
-		
-	]
-},{
-	"Title":"臺灣世界遺產潛力點向前行",
-	"Datas":[
-		{
-			"Main":"藝師訪談",
-			"medias":[
-				{
-					"id":  75901,
-					"title":  "臺灣世界遺產潛力點向前行 第一集：綜合版",
-					"url":  "75901.mp4",
-					"rawurl":  "//imedia.culture.tw/s3/uq/75901-480.mp4",
-					"thumbnail":  "75901.png",
-					"desc":  "在迅速開發的時代巨輪裡，為使國人了解臺灣具有世界遺產之潛力，顯著普世價值之遺跡、建築物群、紀念物及自然環境等，文化部（前身為行政院文化建設委員會）於2002 年至2011 年陸續遴選出18 處臺灣世界遺產潛力點名單。文化部文化資產局秉持保存、傳承及弘揚理念，策劃拍攝18 處臺灣世界遺產潛力點影片，除了記錄近程推動成果、展現18 處潛力點活潑的生命力之外，同時也將臺灣文化與自然資產之美呈現給國人。",
-					"rawimageurl":  "https://imedia-assets.s3.hicloud.net.tw/boch/media/75901/image/image_b3a241c450f440979bc6285a063a6fd5.png"
-				},{
-					"id":  75903,
-					"title":  "臺灣世界遺產潛力點向前行 第二集：一座城一個池一段情",
-					"url":  "75903.mp4",
-					"rawurl":  "//imedia.culture.tw/s3/uq/75903-480.mp4",
-					"thumbnail":  "75903.png",
-					"desc":  "臺灣世界遺產潛力點淡水紅毛城及其周遭歷史建築群、桃園臺地陴塘及樂生療養院等三處之介紹影片",
-					"rawimageurl":  "https://imedia-assets.s3.hicloud.net.tw/boch/media/75903/image/image_a3e90ec90ac243a3b817c90152a94f0b.png"
-				},{
-					"id":  75904,
-					"title":  "臺灣世界遺產潛力點向前行 第三集：風裡來浪裡去的戰地離島情",
-					"url":  "75904.mp4",
-					"rawurl":  "//imedia.culture.tw/s3/uq/75904-480.mp4",
-					"thumbnail":  "75904.png",
-					"desc":  "臺灣世界遺產潛力點澎湖石滬群、金門戰地文化及馬祖戰地文化等三處之介紹",
-					"rawimageurl":  "https://imedia-assets.s3.hicloud.net.tw/boch/media/75904/image/image_964d478703804e0cb67a01c0a0e250a1.png"
-				},{
-					"id":  75905,
-					"title":  "臺灣世界遺產潛力點向前行 第四集：千年一嘆的生命痕跡",
-					"url":  "75905.mp4",
-					"rawurl":  "//imedia.culture.tw/s3/uq/75905-480.mp4",
-					"thumbnail":  "75905.png",
-					"desc":  "臺灣世界遺產潛力點澎湖玄武岩自然保留區、大屯山火山群及水金九礦業遺址等三處之介紹",
-					"rawimageurl":  "https://imedia-assets.s3.hicloud.net.tw/boch/media/75905/image/image_688cae55048f4f7f8602979fd16c375c.png"
-				},{
-					"id":  75906,
-					"title":  "臺灣世界遺產潛力點向前行 第五集：世界級的山林美景",
-					"url":  "75906.mp4",
-					"rawurl":  "//imedia.culture.tw/s3/uq/75906-480.mp4",
-					"thumbnail":  "75906.png",
-					"desc":  "臺灣世界遺產潛力點玉山國家公園、太魯閣國家公園及棲蘭山檜木林等三處之介紹",
-					"rawimageurl":  "https://imedia-assets.s3.hicloud.net.tw/boch/media/75906/image/image_237fe3bf006c4e48885c6df7a3fd90e4.png"
-				}]
-		}
-	]
-},{
-	"Title":"國家文化資產保存獎",
-	"Datas":[
-		{
-			"Main":"第一屆國家文化資產保存獎",
-			"medias":[{
-				"id":  75924,
-				"title":  "第一屆國家文化資產保存獎紀念專輯 正片中文版",
-				"url":  "75924.mp4",
-				"rawurl":  "//imedia.culture.tw/s3/uq/75924-480.mp4",
-				"thumbnail":  "75924.png",
-				"desc":  null,
-				"rawimageurl":  "https://imedia-assets.s3.hicloud.net.tw/boch/media/75924/image/image_fc2bd30d92864e1a897cfa4fbf7c5efb.png"
-			},{
-				"id":  75925,
-				"title":  "第一屆國家文化資產保存獎紀念專輯 精華中文版",
-				"url":  "75925.mp4",
-				"rawurl":  "//imedia.culture.tw/s3/uq/75925-480.mp4",
-				"thumbnail":  "75925.png",
-				"desc":  null,
-				"rawimageurl":  "https://imedia-assets.s3.hicloud.net.tw/boch/media/75925/image/image_8cfd12d9bb1d43d7bf0465dfaffafcb0.png"
-			},{
-				"id":  75926,
-				"title":  "第一屆國家文化資產保存獎紀念專輯英文版",
-				"url":  "75926.mp4",
-				"rawurl":  "//imedia.culture.tw/s3/uq/75926-480.mp4",
-				"thumbnail":  "75926.png",
-				"desc":  "",
-				"rawimageurl":  "https://imedia-assets.s3.hicloud.net.tw/boch/media/75926/image/image_c53fdb3164aa467689a892dd773e4cd9.png"
-			},{
-				"id":  75927,
-				"title":  "第一屆國家文化資產保存獎紀念專輯 精華英文版",
-				"url":  "75927.mp4",
-				"rawurl":  "//imedia.culture.tw/s3/uq/75927-480.mp4",
-				"thumbnail":  "75927.png",
-				"desc":  null,
-				"rawimageurl":  "https://imedia-assets.s3.hicloud.net.tw/boch/media/75927/image/image_504a7add1517427484abc2e1bb9da593.png"
-			}
-		]
-		},
-		{
-			"Main":"第二屆國家文化資產保存獎",
-			"medias":[{
-				"id":  75928,
-				"title":  "第二屆國家文化資產保存獎【精華影片】百世繁華盡心傳",
-				"url":  "75928.mp4",
-				"rawurl":  "//imedia.culture.tw/s3/uq/75928-480.mp4",
-				"thumbnail":  "75928.png",
-				"desc":  "",
-				"rawimageurl":  "https://imedia-assets.s3.hicloud.net.tw/boch/media/75928/image/image_979ded5f0e9245199a6cae2cd266a45c.png"
-			},{
-				"id":  75929,
-				"title":  "第二屆國家文化資產保存獎【精華影片】百世繁華盡心傳(英文版)",
-				"url":  "75929.mp4",
-				"rawurl":  "//imedia.culture.tw/s3/uq/75929-480.mp4",
-				"thumbnail":  "75929.png",
-				"desc":  "",
-				"rawimageurl":  "https://imedia-assets.s3.hicloud.net.tw/boch/media/75929/image/image_975473f11f9145eeb63338b427945668.png"
-			},{
-				"id":  75930,
-				"title":  "第二屆國家文化資產保存獎【頒獎典禮】百世繁華盡心傳",
-				"url":  "75930.mp4",
-				"rawurl":  "//imedia.culture.tw/s3/uq/75930-480.mp4",
-				"thumbnail":  "75930.png",
-				"desc":  "",
-				"rawimageurl":  "https://imedia-assets.s3.hicloud.net.tw/boch/media/75930/image/image_50c868dfa80d4292b4e1e10d277a9f11.png"
-			},{
-				"id":  75931,
-				"title":  "第二屆國家文化資產保存獎【頒獎典禮】百世繁華盡心傳(英文版)",
-				"url":  "75931.mp4",
-				"rawurl":  "//imedia.culture.tw/s3/uq/75931-480.mp4",
-				"thumbnail":  "75931.png",
-				"desc":  "",
-				"rawimageurl":  "https://imedia-assets.s3.hicloud.net.tw/boch/media/75931/image/image_d49437acdfe84ed09b07460490b0079f.png"
-			}
-		]
-		},
-		{
-			"Main":"第三屆國家文化資產保存獎",
-			"medias":[{
-				"id":  75932,
-				"title":  "第三屆國家文化資產保存獎【精華影片】積厚流光 源遠傳承",
-				"url":  "75932.mp4",
-				"rawurl":  "//imedia.culture.tw/s3/uq/75932-480.mp4",
-				"thumbnail":  "75932.png",
-				"desc":  "",
-				"rawimageurl":  "https://imedia-assets.s3.hicloud.net.tw/boch/media/75932/image/image_283fad36c36240f58bd90122f4be0671.png"
-			},{
-				"id":  75933,
-				"title":  "第三屆國家文化資產保存獎【頒獎典禮】積厚流光 源遠傳承",
-				"url":  "75933.mp4",
-				"rawurl":  "//imedia.culture.tw/s3/uq/75933-480.mp4",
-				"thumbnail":  "75933.png",
-				"desc":  "",
-				"rawimageurl":  "https://imedia-assets.s3.hicloud.net.tw/boch/media/75933/image/image_3c96f54e9dd540cd819d16520469673b.png"
-			}
-		]
-		},
-		{
-			"Main":"第四屆國家文化資產保存獎",
-			"medias":[{
-				"id":  75934,
-				"title":  "第四屆國家文化資產保存獎【精華影片】傳承記憶 歷史再現",
-				"url":  "75934.mp4",
-				"rawurl":  "//imedia.culture.tw/s3/uq/75934-1080.mp4",
-				"thumbnail":  "75934.png",
-				"desc":  "",
-				"rawimageurl":  "https://imedia-assets.s3.hicloud.net.tw/boch/media/75934/image/image_981a199104e54053a8467d086f02995f.png"
-			},{
-				"id":  75935,
-				"title":  "第四屆國家文化資產保存獎【頒獎典禮】傳承記憶 歷史再現",
-				"url":  "75935.mp4",
-				"rawurl":  "//imedia.culture.tw/s3/uq/75935-1080.mp4",
-				"thumbnail":  "75935.png",
-				"desc":  "",
-				"rawimageurl":  "https://imedia-assets.s3.hicloud.net.tw/boch/media/75935/image/image_f1111eec3d0c4ff1858faf9df7cd0472.png"
-			}
-		]
 		}
 	]
 }
-
-]}
