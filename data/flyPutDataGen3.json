@@ -1,21 +1,4 @@
 [
-	/*
-	{
-		"external_url": "https://nchdb.boch.gov.tw/assets/overview/ptp/20100527000001",
-		"cover_url": "http://192.168.2.100:3000/system/material_guides/covers/000/004/945/original/%E4%BA%A4%E8%B6%BE%E9%99%B6%E4%BF%9D%E5%AD%98%E4%BF%AE%E5%BE%A9%E6%8A%80%E8%A1%93%E4%BF%9D%E5%AD%98%E8%80%85-%E6%9E%97%E6%B4%B8%E6%B2%82.jpg?1555274612",
-		"id": "20160601000001",
-		"list2": "",
-		"panorama_list": [
-
-		],
-		"list0": "重要傳統藝術暨文化資產保存技術保存者",
-		"description": "林洸沂，出生於嘉義縣新港鄉月眉村，是交趾陶技藝創作者，為中華民國文化資產下傳統藝術的保存修復技術保存者。作品強調文史考究，並以釉色變化運用見長。師從於林萬有、林添木等交趾陶大師，林洸沂精於剪黏及傳統釉藥配製技術，以修復廟宇建築中葉王交趾陶的成就最受矚目",
-		"content_url": "http://192.168.2.100:3000/system/material_guides/covers/000/004/945/original/%E4%BA%A4%E8%B6%BE%E9%99%B6%E4%BF%9D%E5%AD%98%E4%BF%AE%E5%BE%A9%E6%8A%80%E8%A1%93%E4%BF%9D%E5%AD%98%E8%80%85-%E6%9E%97%E6%B4%B8%E6%B2%82.jpg?1555274612",
-		"list1": "",
-		"title": "交趾陶保存修復技術保存者-林洸沂",
-		"rawimageurl": ""
-	},
-	*/
 	{
 		"external_url": "https://nchdb.boch.gov.tw/assets/overview/traditionalCraft/20181022000003",
 		"cover_url": "http://192.168.2.100:3000/system/material_guides/covers/000/004/946/original/%E6%9D%8E%E7%A7%89%E5%9C%AD.jpg?1555274644",
@@ -30,8 +13,7 @@
 		"list1": "",
 		"title": "傳統木雕技術-李秉圭",
 		"rawimageurl": ""
-	},
-	{
+	}, {
 		"external_url": "https://nchdb.boch.gov.tw/assets/overview/ptp/20110526000001",
 		"cover_url": "http://192.168.2.100:3000/system/material_guides/covers/000/004/947/original/%E9%99%B3%E9%8C%AB%E7%85%8C.jpg?1555274666",
 		"id": "20160601000001",
@@ -45,8 +27,7 @@
 		"list1": "",
 		"title": "古典布袋戲偶衣飾盔帽道具製作技術-陳錫煌",
 		"rawimageurl": ""
-	},
-	{
+	}, {
 		"external_url": "https://nchdb.boch.gov.tw/assets/overview/traditionalCraft/20160504000004",
 		"cover_url": "http://192.168.2.100:3000/system/material_guides/covers/000/004/948/original/%E6%B3%B0%E9%9B%85%E6%9F%93%E7%B9%94-%E5%B0%A4%E7%91%AA%EF%BC%8E%E9%81%94%E9%99%B8.jpg?1555274692",
 		"id": "20160601000001",
@@ -60,8 +41,7 @@
 		"list1": "",
 		"title": "泰雅染織-尤瑪．達陸",
 		"rawimageurl": ""
-	},
-	{
+	}, {
 		"external_url": "https://nchdb.boch.gov.tw/assets/overview/traditionalPerformingart/20180413000001",
 		"cover_url": "http://192.168.2.100:3000/system/material_guides/covers/000/004/949/original/%E5%AE%A2%E5%AE%B6%E5%85%AB%E9%9F%B3-%E8%AC%9D%E9%A1%AF%E9%AD%81.jpg?1555274720",
 		"id": "20160601000001",
@@ -75,8 +55,7 @@
 		"list1": "",
 		"title": "客家八音-謝顯魁",
 		"rawimageurl": ""
-	},
-	{
+	}, {
 		"external_url": "https://nchdb.boch.gov.tw/assets/overview/traditionalPerformingart/20180413000002",
 		"cover_url": "http://192.168.2.100:3000/system/material_guides/covers/000/004/950/original/%E4%BA%82%E5%BD%88%E6%88%B2%E6%9B%B2-%E7%8E%8B%E6%85%B6%E8%8A%B3.jpg?1555274744",
 		"id": "20160601000001",
@@ -90,8 +69,7 @@
 		"list1": "",
 		"title": "亂彈戲曲-王慶芳",
 		"rawimageurl": ""
-	},
-	{
+	}, {
 		"external_url": "https://nchdb.boch.gov.tw/assets/overview/ptp/20180611000004",
 		"cover_url": "http://192.168.2.100:3000/system/material_guides/covers/000/004/951/original/%E5%B0%8F%E6%9C%A8%E4%BD%9C%E6%8A%80%E8%A1%93-%E8%98%87%E7%B4%94%E4%BA%AE.jpg?1555274785",
 		"id": "20160601000001",
@@ -105,8 +83,7 @@
 		"list1": "",
 		"title": "小木作技術-蘇純亮",
 		"rawimageurl": ""
-	},
-	{
+	}, {
 		"external_url": "https://nchdb.boch.gov.tw/assets/overview/ptp/20180726000003",
 		"cover_url": "http://192.168.2.100:3000/system/material_guides/covers/000/004/952/original/%E8%94%A1%E8%B2%A1%E5%AE%89.jpg?1555274820",
 		"id": "20160601000001",
@@ -120,8 +97,7 @@
 		"list1": "",
 		"title": "實木王船船帆製作技術-蔡財安",
 		"rawimageurl": ""
-	},
-	{
+	}, {
 		"external_url": "https://nchdb.boch.gov.tw/assets/overview/ptp/20171030000001",
 		"cover_url": "http://192.168.2.100:3000/system/material_guides/covers/000/004/953/original/%E9%87%8D%E8%A6%81%E5%9C%9F%E6%B0%B4%E4%BF%AE%E9%80%A0%E6%8A%80%E8%A1%93%28%E7%93%A6%E4%BD%9C%29-%E5%BB%96%E6%96%87%E8%9C%9C.jpg?1555274855",
 		"id": "20160601000001",
@@ -135,8 +111,7 @@
 		"list1": "",
 		"title": "重要土水修造技術(瓦作)-廖文蜜",
 		"rawimageurl": ""
-	},
-	{
+	}, {
 		"external_url": "https://nchdb.boch.gov.tw/assets/overview/ptp/20171030000002",
 		"cover_url": "http://192.168.2.100:3000/system/material_guides/covers/000/004/954/original/%E9%87%8D%E8%A6%81%E5%A4%A7%E6%9C%A8%E4%BD%9C%E6%8A%80%E8%A1%93-%E7%BF%81%E6%B0%B4%E5%8D%83.jpg?1555274885",
 		"id": "20160601000001",
@@ -150,8 +125,7 @@
 		"list1": "",
 		"title": "重要大木作技術-翁水千",
 		"rawimageurl": ""
-	},
-	{
+	}, {
 		"external_url": "https://nchdb.boch.gov.tw/assets/overview/ptp/20110526000002",
 		"cover_url": "http://192.168.2.100:3000/system/material_guides/covers/000/004/955/original/%E9%87%8D%E8%A6%81%E5%89%AA%E9%BB%8F%E6%B3%A5%E5%A1%91%E6%8A%80%E8%A1%93-%E7%8E%8B%E4%BF%9D%E5%8E%9F.jpg?1555274907",
 		"id": "20160601000001",
@@ -165,8 +139,7 @@
 		"list1": "",
 		"title": "重要剪黏泥塑技術-王保原",
 		"rawimageurl": ""
-	},
-	{
+	}, {
 		"external_url": "https://nchdb.boch.gov.tw/assets/overview/ptp/20171031000001",
 		"cover_url": "http://192.168.2.100:3000/system/material_guides/covers/000/004/956/original/%E9%87%8D%E8%A6%81%E5%A4%A7%E6%9C%A8%E4%BD%9C-%E8%A8%B1%E6%BC%A2%E7%8F%8D.jpg?1555274939",
 		"id": "20160601000001",
@@ -180,8 +153,7 @@
 		"list1": "",
 		"title": "重要大木作技術-許漢珍",
 		"rawimageurl": ""
-	},
-	{
+	}, {
 		"external_url": "https://nchdb.boch.gov.tw/assets/overview/traditionalCraft/20180717000002",
 		"cover_url": "http://192.168.2.100:3000/system/material_guides/covers/000/004/957/original/%E9%84%92%E6%97%8F%E5%82%B3%E7%B5%B1%E9%9E%A3%E7%9A%AE%E6%8A%80%E8%A1%93-%E5%AE%89%E7%82%B3%E8%80%80.jpg?1555274970",
 		"id": "20160601000001",
@@ -195,8 +167,7 @@
 		"list1": "",
 		"title": "鄒族傳統鞣皮技術-安炳耀",
 		"rawimageurl": ""
-	},
-	{
+	}, {
 		"external_url": "https://nchdb.boch.gov.tw/assets/overview/ptp/20180726000004",
 		"cover_url": "http://192.168.2.100:3000/system/material_guides/covers/000/004/958/original/%E5%AF%A6%E6%9C%A8%E7%8E%8B%E8%88%B9%E8%88%B9%E5%B8%86%E8%A3%BD%E4%BD%9C%E6%8A%80%E8%A1%93-%E8%94%A1%E6%96%87%E5%8C%96.jpg?1555274996",
 		"id": "20160601000001",
@@ -210,8 +181,7 @@
 		"list1": "",
 		"title": "實木王船船帆製作技術-蔡文化",
 		"rawimageurl": ""
-	},
-	{
+	}, {
 		"external_url": "https://nchdb.boch.gov.tw/assets/overview/traditionalCraft/20181129000003",
 		"cover_url": "http://192.168.2.100:3000/system/material_guides/covers/000/004/959/original/%E5%82%B3%E7%B5%B1%E7%A3%81%E7%A3%9A%E5%BD%A9%E7%B9%AA%E8%88%87%E7%87%92%E8%A3%BD-%E9%A1%8F%E6%96%87%E4%BC%AF.jpg?1555275021",
 		"id": "20160601000001",
@@ -225,8 +195,7 @@
 		"list1": "",
 		"title": "傳統磁磚彩繪與燒製-顏文伯",
 		"rawimageurl": ""
-	},
-	{
+	}, {
 		"external_url": "https://nchdb.boch.gov.tw/assets/overview/traditionalCraft/20120903000007",
 		"cover_url": "http://192.168.2.100:3000/system/material_guides/covers/000/004/960/original/%E5%82%B3%E7%B5%B1%E5%BB%BA%E7%AF%89%E5%BD%A9%E7%B9%AA-%E9%99%B3%E5%A4%80%E5%BD%9D.jpg?1555275046",
 		"id": "20160601000001",
