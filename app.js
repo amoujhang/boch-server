@@ -98,12 +98,11 @@ app.get('/ss', function (req, res, next) {
 			console.log('ss status code 200')
 			console.log(body) // 打印google首页
 			res.send(body);
-		}
-		else{
+		} else {
 			console.log('ss status error')
 			res.json(ss);
 		}
-	})		 	
+	})
 })
 
 app.post('/ss', function (req, res, next) {
@@ -127,7 +126,16 @@ app.get('/dplists', function (req, res, next) {
 	console.log("Dp query : " + req.query.id + ";");
 	//  res.json(success);
 	if (req.query.id == '0') {
-		res.json(droplists);
+		request('http://192.168.2.100:3000/api/v1/material_guides_dropdownlist/1\?AuthToken\=tech13999', function (error, response, body) {
+			if (!error && response.statusCode == 200) {
+				console.log('ss status code 200')
+				console.log(body) // 打印google首页
+				res.json(body);
+			} else {
+				console.log('ss status error')
+				res.json(droplists);
+			}
+		})		
 	} else if (req.query.id == '1') {
 		res.json(droplistsmenu2);
 	} else {
@@ -390,16 +398,15 @@ app.post('/vr/ctrl', function (req, res, next) {
 
 //LIVE270======================================
 
-app.get('/pj/lvs', function (req, res, next) {		
+app.get('/pj/lvs', function (req, res, next) {
 	request('http://192.168.2.100:3000/api/v1/live_cast_stream/1\?AuthToken\=tech13999', function (error, response, body) {
 		if (!error && response.statusCode == 200) {
 			console.log(body) // 打印google首页
 			res.json(body);
+		} else {
+			res.json(lives);
 		}
-		else{
-			res.json(lives);	
-		}
-	})		
+	})
 })
 
 app.post('/pj/lv', function (req, res, next) {
