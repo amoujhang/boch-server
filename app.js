@@ -93,7 +93,15 @@ app.post('/login', function (req, res, next) {
 
 app.get('/ss', function (req, res, next) {
 	console.log("Get Slideshow");
-	res.json(ss);
+	request('http://192.168.2.100:3000/api/v1/standby_media_sildeshow?AuthToken=tech13999', function (error, response, body) {
+		if (!error && response.statusCode == 200) {
+			console.log(body) // 打印google首页
+			res.json(body);
+		}
+		else{
+			res.json(ss);
+		}
+	})		 	
 })
 
 app.post('/ss', function (req, res, next) {
