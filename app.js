@@ -97,7 +97,7 @@ app.get('/ss', function (req, res, next) {
 		if (!error && response.statusCode == 200) {
 			console.log('ss status code 200')
 			console.log(body) // 打印google首页
-			res.json(body);
+			res.send(body);
 		}
 		else{
 			console.log('ss status error')
