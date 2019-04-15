@@ -95,17 +95,19 @@ app.get('/ss', function (req, res, next) {
 	console.log("Get Slideshow");
 	request('http://192.168.2.100:3000/api/v1/standby_media_sildeshow?AuthToken=tech13999', function (error, response, body) {
 		if (!error && response.statusCode == 200) {
+			console.log('ss status code 200')
 			console.log(body) // 打印google首页
 			res.json(body);
 		}
 		else{
+			console.log('ss status error')
 			res.json(ss);
 		}
 	})		 	
 })
 
 app.post('/ss', function (req, res, next) {
-
+	console.log('post ss')
 	console.log(req.body)
 
 	var s = {
