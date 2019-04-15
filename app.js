@@ -381,8 +381,15 @@ app.post('/vr/ctrl', function (req, res, next) {
 //LIVE270======================================
 
 app.get('/pj/lvs', function (req, res, next) {
-
-	res.json(lives);
+	request('http://192.168.2.100:3000/api/v1/live_cast_stream/1\?AuthToken\=tech13999', function (error, response, body) {
+		if (!error && response.statusCode == 200) {
+			console.log(body) // 打印google首页
+			res.json(body);
+		}
+		else{
+			res.json(lives);	
+		}
+	})	
 })
 
 app.post('/pj/lv', function (req, res, next) {
