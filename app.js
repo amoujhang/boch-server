@@ -516,7 +516,7 @@ app.get('/ifs', function (req, res, next) {
 	request('http://192.168.2.100:3000/api/v1/tp_vr_lessons_dumplesson?AuthToken=tech13999', function (error, response, body) {
 		if (!error && response.statusCode == 200) {
 			console.log('get infos status code 200')
-			droplistsmenu3 = JSON.parse(body)
+			res.json(body)
 		} else {
 			console.log('infos status error')
 			res.json(addWallUrl(infos));
