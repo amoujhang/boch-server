@@ -172,10 +172,10 @@ function makeFlyput(data) {
 		/*
 		for (var j = 0; j < newData[i].panorama_list.length; j++) {
 
-			newData[i].panorama_list[j].thumb = flyputUrl + data[i].panorama_list[j].thumb;
-			newData[i].panorama_list[j].path = flyputUrl + data[i].panorama_list[j].path;
+		newData[i].panorama_list[j].thumb = flyputUrl + data[i].panorama_list[j].thumb;
+		newData[i].panorama_list[j].path = flyputUrl + data[i].panorama_list[j].path;
 		}
-		*/
+		 */
 	}
 
 	// Add rootObject
@@ -188,8 +188,8 @@ function makeFlyput(data) {
 request('http://192.168.2.100:3000/api/v1/material_guides_dumpdata\?AuthToken\=tech13999', function (error, response, body) {
 	if (!error && response.statusCode == 200) {
 		console.log('get flyput status code 200')
-		flyput = JSON.parse(body)		
-		console.log('get flyput finished')
+		flyput = JSON.parse(body)
+			console.log('get flyput finished')
 	} else {
 		console.log('flyput status error')
 	}
@@ -260,7 +260,7 @@ app.get('/locs', function (req, res, next) {
 				data: flyput
 			}).value;
 	} else {
-		var fil0 = usedp.lists[id1].list0;		
+		var fil0 = usedp.lists[id1].list0;
 		console.log('fil0:' + fil0)
 		console.log("Wf query : " + fil0 + "," + fil1 + "," + fil2 + ";");
 		result = jsonQuery('[* list0=' + fil0 + ']', {
@@ -433,27 +433,37 @@ app.post('/vr/ctrl', function (req, res, next) {
 
 app.get('/pj/lvs', function (req, res, next) {
 	request('http://192.168.2.100:3000/api/v1/live_cast_stream/1\?AuthToken\=tech13999', function (error, response, body) {
-		if (!error && response.statusCode == 200) {
-			console.log(body) // 打印google首页
+		if (!error && response.statusCode == 200) {			
 			res.send(body);
 		} else {
 			res.json(lives);
 		}
 	})
 })
-
 app.post('/pj/lv', function (req, res, next) {
-
 	//receive  title,lv description,livefeed
 	console.log(req.body)
+	var s = {
+		access_token: "asd12rl;3k2eo1kejf",
+		topic: "boch/270/lv/open",
+		payload: JSON.stringify(req.body)
+	};
+
+	sendJson(s);
+
 	res.json(success);
 })
-
 app.post('/pj/lv/ctrl', function (req, res, next) {
-	//receive 4 dir key info
+	//receive ctrl info
+	console.log(req.body)
+	var s = {
+		access_token: "asd12rl;3k2eo1kejf",
+		topic: "boch/270/lv/ctrl",
+		payload: JSON.stringify(req.body)
+	};
 
+	sendJson(s);
 
-	console.log("Lv dir" + req.query.dir);
 	res.json(success);
 })
 
@@ -642,22 +652,33 @@ app.get('/to/lvs', function (req, res, next) {
 
 	res.json(lives);
 })
-
 app.post('/to/lv', function (req, res, next) {
-
 	//receive  title,lv description,livefeed
 	console.log(req.body)
+
+	var s = {
+		access_token: "asd12rl;3k2eo1kejf",
+		topic: "boch/wall/lv/open",
+		payload: JSON.stringify(req.body)
+	};
+
+	sendJson(s);
+
 	res.json(success);
 })
-
 app.post('/to/lv/ctrl', function (req, res, next) {
-	//receive 4 dir key info
+	//receive ctrl info
+	console.log(req.body)
+	var s = {
+		access_token: "asd12rl;3k2eo1kejf",
+		topic: "boch/wall/lv/ctrl",
+		payload: JSON.stringify(req.body)
+	};
 
+	sendJson(s);
 
-	console.log("Lv dir" + req.query.dir);
 	res.json(success);
 })
-
 //Exe=====================
 app.post('/if/exe', function (req, res, next) {
 
