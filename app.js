@@ -458,7 +458,7 @@ app.post('/pj/lv/ctrl', function (req, res, next) {
 	console.log(req.body)
 	var s = {
 		access_token: "asd12rl;3k2eo1kejf",
-		topic: "boch/270/lv/ctrl",
+		topic: "boch/270/lv/control",
 		payload: JSON.stringify(req.body)
 	};
 
@@ -671,7 +671,7 @@ app.post('/to/lv/ctrl', function (req, res, next) {
 	console.log(req.body)
 	var s = {
 		access_token: "asd12rl;3k2eo1kejf",
-		topic: "boch/wall/lv/ctrl",
+		topic: "boch/wall/lv/control",
 		payload: JSON.stringify(req.body)
 	};
 
