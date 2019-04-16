@@ -258,7 +258,16 @@ app.get('/locs', function (req, res, next) {
 		var fil2 = usedp.lists[id1].childeren0[id2].childeren1[id3].list2;
 		console.log("Wf query : " + fil0 + "," + fil1 + "," + fil2 + ";");
 		console.log('http://192.168.2.100:3000/api/v1/material_guides_dumpdata?AuthToken=tech13999&list0=' + fil0 + '&list1=' + fil1 + '&list2=' + fil2);
-		request('http://192.168.2.100:3000/api/v1/material_guides_dumpdata?AuthToken=tech13999&list0=' + fil0 + '&list1=' + fil1 + '&list2=' + fil2, function (error, response, body) {
+		var propertiesObject = {
+			AuthToken: 'tech13999',
+			list0: fil0,
+			list1: fil1,
+			list2: fil2
+		};
+		request({
+			url: 'http://192.168.2.100:3000/api/v1/material_guides_dumpdata',
+			qs: propertiesObject
+		}, function (error, response, body) {
 			if (!error && response.statusCode == 200) {
 				console.log('get query 0 & 1 flyput status code 200')
 				result = JSON.parse(body);
