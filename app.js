@@ -235,13 +235,6 @@ app.get('/fly', function (req, res, next) {
 			if (!error && response.statusCode == 200) {
 				console.log('get query 0 & 1 flyput status code 200')
 				result = JSON.parse(body);
-				var s = {
-					access_token: "asd12rl;3k2eo1kejf",
-					topic: "boch/270/flyput/content/change",
-					payload: null
-				};
-				sendJson(s);
-				console.log("waterfall Set");
 				res.json(makeFlyput(result));
 			} else {
 				console.log('flyput status error')
@@ -265,13 +258,6 @@ app.get('/fly', function (req, res, next) {
 			if (!error && response.statusCode == 200) {
 				console.log('get query 2 flyput status code 200')
 				result = JSON.parse(body);
-				var s = {
-					access_token: "asd12rl;3k2eo1kejf",
-					topic: "boch/270/flyput/content/change",
-					payload: null
-				};
-				sendJson(s);
-				console.log("waterfall Set");
 				res.json(makeFlyput(result));
 			} else {
 				console.log('flyput status error')
