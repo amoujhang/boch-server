@@ -188,7 +188,7 @@ function makeFlyput(data) {
 request('http://192.168.2.100:3000/api/v1/material_guides_dumpdata\?AuthToken\=tech13999', function (error, response, body) {
 	if (!error && response.statusCode == 200) {
 		console.log('get flyput status code 200')
-		flyput = JSON.parse(body)
+		flyput = JSON.parse(body)		
 		console.log('get flyput finished')
 	} else {
 		console.log('flyput status error')
@@ -227,7 +227,7 @@ app.get('/fly', function (req, res, next) {
 		var fil0 = usedp.lists[id1].list0;
 		console.log("Wf query : " + fil0 + "," + fil1 + "," + fil2 + ";");
 		var result = jsonQuery('[* list0=' + fil0 + ']', {
-				data: flyput3
+				data: flyput
 			}).value;
 		res.json(makeFlyput(result));
 	}
@@ -260,12 +260,11 @@ app.get('/locs', function (req, res, next) {
 				data: flyput
 			}).value;
 	} else {
-		var fil0 = usedp.lists[id1].list0;
-		console.log('flyput3:' + flyput3)
+		var fil0 = usedp.lists[id1].list0;		
 		console.log('fil0:' + fil0)
 		console.log("Wf query : " + fil0 + "," + fil1 + "," + fil2 + ";");
 		result = jsonQuery('[* list0=' + fil0 + ']', {
-				data: flyput3
+				data: flyput
 			}).value;
 	}
 
