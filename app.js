@@ -215,22 +215,71 @@ app.get('/fly', function (req, res, next) {
 		usedp = droplistsmenu3;
 	}
 
+	var result = '';
 	if (id0 != 2) {
 		var fil0 = usedp.lists[id1].list0;
 		var fil1 = usedp.lists[id1].childeren0[id2].list1;
 		var fil2 = usedp.lists[id1].childeren0[id2].childeren1[id3].list2;
 		console.log("Wf query : " + fil0 + "," + fil1 + "," + fil2 + ";");
-		var result = jsonQuery('[* list0=' + fil0 + ' && list1=' + fil1 + ' && list2=' + fil2 + ']', {
-				data: flyput
-			}).value;
-		res.json(makeFlyput(result));
+		console.log('http://192.168.2.100:3000/api/v1/material_guides_dumpdata?AuthToken=tech13999&list0=' + fil0 + '&list1=' + fil1 + '&list2=' + fil2);
+		var propertiesObject = {
+			AuthToken: 'tech13999',
+			list0: fil0,
+			list1: fil1,
+			list2: fil2
+		};
+		request({
+			url: 'http://192.168.2.100:3000/api/v1/material_guides_dumpdata',
+			qs: propertiesObject
+		}, function (error, response, body) {
+			if (!error && response.statusCode == 200) {
+				console.log('get query 0 & 1 flyput status code 200')
+				result = JSON.parse(body);
+				var s = {
+					access_token: "asd12rl;3k2eo1kejf",
+					topic: "boch/270/flyput/content/change",
+					payload: null
+				};
+				sendJson(s);
+				console.log("waterfall Set");
+				res.json(makeFlyput(result));
+			} else {
+				console.log('flyput status error')
+			}
+		})
+		//result = jsonQuery('[* list0=' + fil0 + ' && list1=' + fil1 + ' && list2=' + fil2 + ']', {
+		//		data: flyput
+		//	}).value;
 	} else {
 		var fil0 = usedp.lists[id1].list0;
 		console.log("Wf query : " + fil0 + "," + fil1 + "," + fil2 + ";");
-		var result = jsonQuery('[* list0=' + fil0 + ']', {
-				data: flyput
-			}).value;
-		res.json(makeFlyput(result));
+		console.log('http://192.168.2.100:3000/api/v1/material_guides_dumpdata?AuthToken=tech13999&list0=' + fil0);
+		var propertiesObject = {
+			AuthToken: 'tech13999',
+			list0: fil0
+		};
+		request({
+			url: 'http://192.168.2.100:3000/api/v1/material_guides_dumpdata',
+			qs: propertiesObject
+		}, function (error, response, body) {
+			if (!error && response.statusCode == 200) {
+				console.log('get query 2 flyput status code 200')
+				result = JSON.parse(body);
+				var s = {
+					access_token: "asd12rl;3k2eo1kejf",
+					topic: "boch/270/flyput/content/change",
+					payload: null
+				};
+				sendJson(s);
+				console.log("waterfall Set");
+				res.json(makeFlyput(result));
+			} else {
+				console.log('flyput status error')
+			}
+		})
+		//result = jsonQuery('[* list0=' + fil0 + ']', {
+		//		data: flyput
+		//	}).value;
 	}
 })
 
@@ -290,7 +339,14 @@ app.get('/locs', function (req, res, next) {
 		var fil0 = usedp.lists[id1].list0;
 		console.log("Wf query : " + fil0 + "," + fil1 + "," + fil2 + ";");
 		console.log('http://192.168.2.100:3000/api/v1/material_guides_dumpdata?AuthToken=tech13999&list0=' + fil0);
-		request('http://192.168.2.100:3000/api/v1/material_guides_dumpdata?AuthToken=tech13999&list0=' + fil0, function (error, response, body) {
+		var propertiesObject = {
+			AuthToken: 'tech13999',
+			list0: fil0
+		};
+		request({
+			url: 'http://192.168.2.100:3000/api/v1/material_guides_dumpdata',
+			qs: propertiesObject
+		}, function (error, response, body) {
 			if (!error && response.statusCode == 200) {
 				console.log('get query 2 flyput status code 200')
 				result = JSON.parse(body);
