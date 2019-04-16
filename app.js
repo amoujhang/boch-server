@@ -185,6 +185,16 @@ function makeFlyput(data) {
 	return dataJson;
 }
 
+request('http://192.168.2.100:3000/api/v1/material_guides_dumpdata\?AuthToken\=tech13999', function (error, response, body) {
+	if (!error && response.statusCode == 200) {
+		console.log('get flyput status code 200')
+		flyput = JSON.parse(body)
+		console.log('get flyput finished')
+	} else {
+		console.log('flyput status error')
+	}
+})
+
 var id0 = 0;
 var id1 = 0;
 var id2 = 0;
