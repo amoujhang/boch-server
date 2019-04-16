@@ -121,7 +121,7 @@ app.post('/ss', function (req, res, next) {
 })
 
 //DP======================================
-/*
+
 request('http://192.168.2.100:3000/api/v1/material_guides_dropdownlist/1\?AuthToken\=tech13999', function (error, response, body) {
 if (!error && response.statusCode == 200) {
 console.log('get dplists0 status code 200')
@@ -146,7 +146,7 @@ droplistsmenu3 = JSON.parse(body)
 console.log('dplists2 status error')
 }
 })
- */
+ 
 app.get('/dplists', function (req, res, next) {
 	console.log("Dp query : " + req.query.id + ";");
 	//  res.json(success);
