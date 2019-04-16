@@ -369,20 +369,28 @@ app.post('/pano/close', function (req, res, next) {
 
 app.get('/cls', function (req, res, next) {
 
-	var newData = JSON.parse(JSON.stringify(classes));
+	request('http://192.168.2.100:3000/api/v1/vr_lessons_dumplesson?AuthToken=tech13999', function (error, response, body) {
+		if (!error && response.statusCode == 200) {
+			console.log('get infos status code 200')
+			res.send(body)
+		} else {
+			console.log('infos status error')
+			var newData = JSON.parse(JSON.stringify(classes));
 
-	// Insert server url
-	for (var i = 0; i < newData.classes.length; i++) {
+			// Insert server url
+			for (var i = 0; i < newData.classes.length; i++) {
 
-		for (var j = 0; j < newData.classes[i].files.length; j++) {
+				for (var j = 0; j < newData.classes[i].files.length; j++) {
 
-			newData.classes[i].files[j].thumb = VRUrl + classes.classes[i].files[j].thumb;
-			newData.classes[i].files[j].path = VRUrl + classes.classes[i].files[j].path;
+					newData.classes[i].files[j].thumb = VRUrl + classes.classes[i].files[j].thumb;
+					newData.classes[i].files[j].path = VRUrl + classes.classes[i].files[j].path;
+				}
+
+			}
+
+			res.json(newData);
 		}
-
-	}
-
-	res.json(newData);
+	})
 
 })
 
@@ -516,7 +524,7 @@ app.get('/ifs', function (req, res, next) {
 	request('http://192.168.2.100:3000/api/v1/tp_vr_lessons_dumplesson?AuthToken=tech13999', function (error, response, body) {
 		if (!error && response.statusCode == 200) {
 			console.log('get infos status code 200')
-			res.json(body)
+			res.send(body)
 		} else {
 			console.log('infos status error')
 			res.json(addWallUrl(infos));
