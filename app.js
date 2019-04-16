@@ -123,30 +123,30 @@ app.post('/ss', function (req, res, next) {
 //DP======================================
 
 request('http://192.168.2.100:3000/api/v1/material_guides_dropdownlist/1\?AuthToken\=tech13999', function (error, response, body) {
-if (!error && response.statusCode == 200) {
-console.log('get dplists0 status code 200')
-droplists = JSON.parse(body)
-} else {
-console.log('dplists0 status error')
-}
+	if (!error && response.statusCode == 200) {
+		console.log('get dplists0 status code 200')
+		droplists = JSON.parse(body)
+	} else {
+		console.log('dplists0 status error')
+	}
 })
 request('http://192.168.2.100:3000/api/v1/material_guides_dropdownlist/2\?AuthToken\=tech13999', function (error, response, body) {
-if (!error && response.statusCode == 200) {
-console.log('get dplists1 status code 200')
-droplistsmenu2 = JSON.parse(body)
-} else {
-console.log('dplists1 status error')
-}
+	if (!error && response.statusCode == 200) {
+		console.log('get dplists1 status code 200')
+		droplistsmenu2 = JSON.parse(body)
+	} else {
+		console.log('dplists1 status error')
+	}
 })
 request('http://192.168.2.100:3000/api/v1/material_guides_dropdownlist/3\?AuthToken\=tech13999', function (error, response, body) {
-if (!error && response.statusCode == 200) {
-console.log('get dplists2 status code 200')
-droplistsmenu3 = JSON.parse(body)
-} else {
-console.log('dplists2 status error')
-}
+	if (!error && response.statusCode == 200) {
+		console.log('get dplists2 status code 200')
+		droplistsmenu3 = JSON.parse(body)
+	} else {
+		console.log('dplists2 status error')
+	}
 })
- 
+
 app.get('/dplists', function (req, res, next) {
 	console.log("Dp query : " + req.query.id + ";");
 	//  res.json(success);
@@ -165,19 +165,20 @@ function makeFlyput(data) {
 	var newData = JSON.parse(JSON.stringify(data));
 
 	// Change server url
+	/*
 	for (var i = 0; i < newData.length; i++) {
 
-		var unwanted = "E:/Downloads/boch-image/";
-		newData[i].cover_url = newData[i].cover_url.replace(unwanted, flyputUrl);
-		/*
-		for (var j = 0; j < newData[i].panorama_list.length; j++) {
+	var unwanted = "E:/Downloads/boch-image/";
+	newData[i].cover_url = newData[i].cover_url.replace(unwanted, flyputUrl);
 
-		newData[i].panorama_list[j].thumb = flyputUrl + data[i].panorama_list[j].thumb;
-		newData[i].panorama_list[j].path = flyputUrl + data[i].panorama_list[j].path;
-		}
-		 */
+	for (var j = 0; j < newData[i].panorama_list.length; j++) {
+
+	newData[i].panorama_list[j].thumb = flyputUrl + data[i].panorama_list[j].thumb;
+	newData[i].panorama_list[j].path = flyputUrl + data[i].panorama_list[j].path;
 	}
 
+	}
+	 */
 	// Add rootObject
 	var dataJson = {};
 	dataJson.locations = newData;
@@ -256,29 +257,49 @@ app.get('/locs', function (req, res, next) {
 		var fil1 = usedp.lists[id1].childeren0[id2].list1;
 		var fil2 = usedp.lists[id1].childeren0[id2].childeren1[id3].list2;
 		console.log("Wf query : " + fil0 + "," + fil1 + "," + fil2 + ";");
-		result = jsonQuery('[* list0=' + fil0 + ' && list1=' + fil1 + ' && list2=' + fil2 + ']', {
-				data: flyput
-			}).value;
+		//http://localhost:3000/api/v1/material_guides_dumpdata?AuthToken=tech13999&&list0=台南市
+		request('http://192.168.2.100:3000/api/v1/material_guides_dumpdata?AuthToken=tech13999&list0=' + fil0 + '&list1=' + fil1 + '&list2=' + fil2, function (error, response, body) {
+			if (!error && response.statusCode == 200) {
+				console.log('get query 0 & 1 flyput status code 200')
+				result = JSON.parse(body);
+				var s = {
+					access_token: "asd12rl;3k2eo1kejf",
+					topic: "boch/270/flyput/content/change",
+					payload: null
+				};
+				sendJson(s);
+				console.log("waterfall Set");
+				res.json(makeFlyput(result));
+			} else {
+				console.log('flyput status error')
+			}
+		})
+		//result = jsonQuery('[* list0=' + fil0 + ' && list1=' + fil1 + ' && list2=' + fil2 + ']', {
+		//		data: flyput
+		//	}).value;
 	} else {
 		var fil0 = usedp.lists[id1].list0;
-		console.log('fil0:' + fil0)
 		console.log("Wf query : " + fil0 + "," + fil1 + "," + fil2 + ";");
-		result = jsonQuery('[* list0=' + fil0 + ']', {
-				data: flyput
-			}).value;
+		request('http://192.168.2.100:3000/api/v1/material_guides_dumpdata?AuthToken=tech13999&list0=' + fil0, function (error, response, body) {
+			if (!error && response.statusCode == 200) {
+				console.log('get query 2 flyput status code 200')
+				result = JSON.parse(body);
+				var s = {
+					access_token: "asd12rl;3k2eo1kejf",
+					topic: "boch/270/flyput/content/change",
+					payload: null
+				};
+				sendJson(s);
+				console.log("waterfall Set");
+				res.json(makeFlyput(result));
+			} else {
+				console.log('flyput status error')
+			}
+		})
+		//result = jsonQuery('[* list0=' + fil0 + ']', {
+		//		data: flyput
+		//	}).value;
 	}
-
-	var s = {
-		access_token: "asd12rl;3k2eo1kejf",
-		topic: "boch/270/flyput/content/change",
-		payload: null
-	};
-
-	sendJson(s);
-
-	console.log("waterfall Set");
-	res.json(makeFlyput(result));
-
 })
 
 /*
@@ -433,7 +454,7 @@ app.post('/vr/ctrl', function (req, res, next) {
 
 app.get('/pj/lvs', function (req, res, next) {
 	request('http://192.168.2.100:3000/api/v1/live_cast_stream/1\?AuthToken\=tech13999', function (error, response, body) {
-		if (!error && response.statusCode == 200) {			
+		if (!error && response.statusCode == 200) {
 			res.send(body);
 		} else {
 			res.json(lives);
