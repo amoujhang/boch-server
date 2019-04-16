@@ -169,13 +169,13 @@ function makeFlyput(data) {
 
 		var unwanted = "E:/Downloads/boch-image/";
 		newData[i].cover_url = newData[i].cover_url.replace(unwanted, flyputUrl);
-
+		/*
 		for (var j = 0; j < newData[i].panorama_list.length; j++) {
 
 			newData[i].panorama_list[j].thumb = flyputUrl + data[i].panorama_list[j].thumb;
 			newData[i].panorama_list[j].path = flyputUrl + data[i].panorama_list[j].path;
 		}
-
+		*/
 	}
 
 	// Add rootObject
@@ -435,7 +435,7 @@ app.get('/pj/lvs', function (req, res, next) {
 	request('http://192.168.2.100:3000/api/v1/live_cast_stream/1\?AuthToken\=tech13999', function (error, response, body) {
 		if (!error && response.statusCode == 200) {
 			console.log(body) // 打印google首页
-			res.json(body);
+			res.send(body);
 		} else {
 			res.json(lives);
 		}
