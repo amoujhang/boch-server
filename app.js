@@ -123,30 +123,30 @@ app.post('/ss', function (req, res, next) {
 //DP======================================
 /*
 request('http://192.168.2.100:3000/api/v1/material_guides_dropdownlist/1\?AuthToken\=tech13999', function (error, response, body) {
-	if (!error && response.statusCode == 200) {
-		console.log('get dplists0 status code 200')
-		droplists = JSON.parse(body)
-	} else {
-		console.log('dplists0 status error')
-	}
+if (!error && response.statusCode == 200) {
+console.log('get dplists0 status code 200')
+droplists = JSON.parse(body)
+} else {
+console.log('dplists0 status error')
+}
 })
 request('http://192.168.2.100:3000/api/v1/material_guides_dropdownlist/2\?AuthToken\=tech13999', function (error, response, body) {
-	if (!error && response.statusCode == 200) {
-		console.log('get dplists1 status code 200')
-		droplistsmenu2 = JSON.parse(body)
-	} else {
-		console.log('dplists1 status error')
-	}
+if (!error && response.statusCode == 200) {
+console.log('get dplists1 status code 200')
+droplistsmenu2 = JSON.parse(body)
+} else {
+console.log('dplists1 status error')
+}
 })
 request('http://192.168.2.100:3000/api/v1/material_guides_dropdownlist/3\?AuthToken\=tech13999', function (error, response, body) {
-	if (!error && response.statusCode == 200) {
-		console.log('get dplists2 status code 200')
-		droplistsmenu3 = JSON.parse(body)
-	} else {
-		console.log('dplists2 status error')
-	}
+if (!error && response.statusCode == 200) {
+console.log('get dplists2 status code 200')
+droplistsmenu3 = JSON.parse(body)
+} else {
+console.log('dplists2 status error')
+}
 })
-*/
+ */
 app.get('/dplists', function (req, res, next) {
 	console.log("Dp query : " + req.query.id + ";");
 	//  res.json(success);
@@ -511,10 +511,17 @@ function addWallUrl(data) {
 
 app.get('/ifs', function (req, res, next) {
 	// /if?id=0~1
-	console.log("infos query:" + req.query.id);
-
-	res.json(addWallUrl(infos));
-	//res.json(infosOld);
+	//console.log("infos query:" + req.query.id);
+	//res.json(addWallUrl(infos));
+	request('http://192.168.2.100:3000/api/v1/tp_vr_lessons_dumplesson?AuthToken=tech13999', function (error, response, body) {
+		if (!error && response.statusCode == 200) {
+			console.log('get infos status code 200')
+			droplistsmenu3 = JSON.parse(body)
+		} else {
+			console.log('infos status error')
+			res.json(addWallUrl(infos));
+		}
+	})
 })
 
 app.post('/if', function (req, res, next) {
