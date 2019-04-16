@@ -257,7 +257,7 @@ app.get('/locs', function (req, res, next) {
 		var fil1 = usedp.lists[id1].childeren0[id2].list1;
 		var fil2 = usedp.lists[id1].childeren0[id2].childeren1[id3].list2;
 		console.log("Wf query : " + fil0 + "," + fil1 + "," + fil2 + ";");
-		//http://localhost:3000/api/v1/material_guides_dumpdata?AuthToken=tech13999&&list0=台南市
+		console.log('http://192.168.2.100:3000/api/v1/material_guides_dumpdata?AuthToken=tech13999&list0=' + fil0 + '&list1=' + fil1 + '&list2=' + fil2);
 		request('http://192.168.2.100:3000/api/v1/material_guides_dumpdata?AuthToken=tech13999&list0=' + fil0 + '&list1=' + fil1 + '&list2=' + fil2, function (error, response, body) {
 			if (!error && response.statusCode == 200) {
 				console.log('get query 0 & 1 flyput status code 200')
@@ -280,6 +280,7 @@ app.get('/locs', function (req, res, next) {
 	} else {
 		var fil0 = usedp.lists[id1].list0;
 		console.log("Wf query : " + fil0 + "," + fil1 + "," + fil2 + ";");
+		console.log('http://192.168.2.100:3000/api/v1/material_guides_dumpdata?AuthToken=tech13999&list0=' + fil0);
 		request('http://192.168.2.100:3000/api/v1/material_guides_dumpdata?AuthToken=tech13999&list0=' + fil0, function (error, response, body) {
 			if (!error && response.statusCode == 200) {
 				console.log('get query 2 flyput status code 200')
