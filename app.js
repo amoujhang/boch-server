@@ -613,7 +613,13 @@ app.get('/ifs', function (req, res, next) {
 	// /if?id=0~1
 	//console.log("infos query:" + req.query.id);
 	//res.json(addWallUrl(infos));
-	request('http://192.168.2.100:3000/api/v1/tp_vr_lessons_dumplesson?AuthToken=tech13999', function (error, response, body) {
+	var url = ""
+	if(req.query.id == 0){
+		url = 'http://192.168.2.100:3000/api/v1/tp_vr_lessons_dumplesson?AuthToken=tech13999&data_type=1'
+	} else {
+		url = 'http://192.168.2.100:3000/api/v1/tp_vr_lessons_dumplesson?AuthToken=tech13999&data_type=2'
+	}
+	request(url, function (error, response, body) {
 		if (!error && response.statusCode == 200) {
 			console.log('get infos status code 200')
 			res.send(body)
