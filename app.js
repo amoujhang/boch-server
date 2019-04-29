@@ -728,8 +728,13 @@ app.post('/br/pr/logout', function (req, res, next) {
 //LIVETouch======================================
 
 app.get('/to/lvs', function (req, res, next) {
-
-	res.json(lives);
+	request('http://192.168.2.100:3000/api/v1/live_cast_stream/2\?AuthToken\=tech13999', function (error, response, body) {
+		if (!error && response.statusCode == 200) {
+			res.send(body);
+		} else {
+			res.json(lives);
+		}
+	})
 })
 app.post('/to/lv', function (req, res, next) {
 	//receive  title,lv description,livefeed
