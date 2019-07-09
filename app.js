@@ -1,4 +1,3 @@
-
 var express = require('express');
 var bodyParser = require('body-parser');
 var request = require('request');
@@ -30,14 +29,14 @@ var flyputUrl = "http://" + config.serverIp + ":" + config.port + "/static/flypu
 var VRUrl = "http://" + config.serverIp + ":" + config.port + "/static/VR/";
 
 app.use(bodyParser.urlencoded({
-		extended: true
-	}));
+	extended: true
+}));
 app.use(bodyParser.json());
 app.use('/static', express.static(config.staticPath));
 
 var listener = app.listen(config.port, function () {
-		console.log("app is running on port " + config.port);
-	});
+	console.log("app is running on port " + config.port);
+});
 
 function sendJson(Data) {
 	var clientServerOptions = {
@@ -147,17 +146,41 @@ request('http://192.168.2.100:3000/api/v1/material_guides_dropdownlist/3\?AuthTo
 	}
 })
 
+
 app.get('/dplists', function (req, res, next) {
 	console.log("Dp query : " + req.query.id + ";");
 	//  res.json(success);
 	if (req.query.id == '0') {
-		res.json(droplists);
+		request('http://192.168.2.100:3000/api/v1/material_guides_dropdownlist/1\?AuthToken\=tech13999', function (error, response, body) {
+			if (!error && response.statusCode == 200) {
+				console.log('get dplists0 status code 200')
+				droplists = JSON.parse(body)
+				res.json(droplists);
+			} else {
+				console.log('dplists0 status error')
+			}
+		})
 	} else if (req.query.id == '1') {
-		res.json(droplistsmenu2);
+		request('http://192.168.2.100:3000/api/v1/material_guides_dropdownlist/2\?AuthToken\=tech13999', function (error, response, body) {
+			if (!error && response.statusCode == 200) {
+				console.log('get dplists1 status code 200')
+				droplistsmenu2 = JSON.parse(body)
+				res.json(droplistsmenu2);
+			} else {
+				console.log('dplists1 status error')
+			}
+		})
 	} else {
-		res.json(droplistsmenu3);
+		request('http://192.168.2.100:3000/api/v1/material_guides_dropdownlist/3\?AuthToken\=tech13999', function (error, response, body) {
+			if (!error && response.statusCode == 200) {
+				console.log('get dplists2 status code 200')
+				droplistsmenu3 = JSON.parse(body)
+				res.json(droplistsmenu3);
+			} else {
+				console.log('dplists2 status error')
+			}
+		})
 	}
-	//res.json(small);
 })
 
 function makeFlyput(data) {
@@ -190,7 +213,7 @@ request('http://192.168.2.100:3000/api/v1/material_guides_dumpdata\?AuthToken\=t
 	if (!error && response.statusCode == 200) {
 		console.log('get flyput status code 200')
 		flyput = JSON.parse(body)
-			console.log('get flyput finished')
+		console.log('get flyput finished')
 	} else {
 		console.log('flyput status error')
 	}
@@ -614,7 +637,7 @@ app.get('/ifs', function (req, res, next) {
 	//console.log("infos query:" + req.query.id);
 	//res.json(addWallUrl(infos));
 	var url = ""
-	if(req.query.id == 0){
+	if (req.query.id == 0) {
 		url = 'http://192.168.2.100:3000/api/v1/tp_vr_lessons_dumplesson?AuthToken=tech13999&data_type=1'
 	} else {
 		url = 'http://192.168.2.100:3000/api/v1/tp_vr_lessons_dumplesson?AuthToken=tech13999&data_type=2'
